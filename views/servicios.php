@@ -113,7 +113,7 @@
     $descripcion = $servicio['descripcion'];
     $precio = $servicio['precio'];
     $foto = $servicio['foto'];
- }
+ 
     // $arrLength = sizeof($listaProductos);
     echo "
         <div class='container text-center'>
@@ -130,11 +130,12 @@
                     </div>
                     </a>
                 </div>
-"
+";
+ } 
 
 ?>
 
-                </div>
+              
 
 
 

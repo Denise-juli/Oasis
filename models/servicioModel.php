@@ -28,13 +28,14 @@
         }
 /*MODIFICADO AYE 27/11 */ 
         public function guardar(){
-            $this->setQuery("INSERT INTO servicio (servicio_id, nombre, descripcion, precio)
-            VALUES(:servicio_id, :nombre, :descripcion, :precio)");
+            $this->setQuery("INSERT INTO servicio (servicio_id, nombre, descripcion, precio, foto)
+            VALUES(:servicio_id, :nombre, :descripcion, :precio, :foto)");
             $this->ejecutar(array(
                 ':servicio_id' => $this->servicio_id,
                 ':nombre' => $this->nombre,
                 ':descripcion' => $this->descripcion,
                 ':precio' => $this->precio,
+                ':foto' => $this->foto,
             ));
         }
 
