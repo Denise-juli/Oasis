@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>turno</title>
+  <link rel="shortcut icon" href="../public/img/flor.png" type="image/png">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3 img-fluid/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel="stylesheet" href="../public/css/estilos.css">
+</head>
+
+<header class="" style=" color: #545454;">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg aline-item-center text-uppercase pt-4">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img src="../public/img/logo.png" href="#" alt="" width="140" height="70" class="logo d-inline-block align-text-top"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end navi" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+          <div class="offcanvas-header">
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+              <ul class="navbar-nav ms-auto ms-3">
+
+                <li class="nav-item pr-3">
+                <a class="nav-link" href="nosotros.html">Nosotros</a>  
+                </li>
+                
+                <li class="nav-item pr-3">
+                    <a class="nav-link" href="contacto.html">Contacto</a>  
+                    </li>
+                    <li class="nav-item pr-3">
+                        <a  class="nav-link" href="sedes.html">Sedes</a>  
+                        </li>
+                        <li class="nav-item pr-3">
+                            <a class="nav-link" href="servicios.html">Servicios</a>  
+                            </li>
+                            <li class="nav-item pr-3">
+                                <a class="nav-link" href="logIn.html">logIn</a>  
+                                </li>
+
+</ul>
+            </div>
+        </div>
+    </nav>
+  </div>
+</header>
+
+<body>
+ 
+
+
+
+
+
+
+<div class="container text-center" style="color:black; margin-top:5%;">
+  <div class="container text-center card mb" style="font-family: Arial, Helvetica, sans-serif;">
+    <div class="row">
+      <div class="col">   
+        <br />
+        <br />
+          <!--label for="start">Fecha:</label-->
+          <input type="date" id="start" name="trip-start" value="2018-07-22" min="2022-10-18" max="2023-12-31" class="text-center" >
+          <button type="button" class="btn btn-dark " style="margin-left: 10px; background-color: #966857;"><img src="../public/img/carrito.png" style="height: 20px; width: 20px; "></button>
+          <br />
+          <br />
+          <div class="col">   
+           <div style="margin-right: 40px ; margin-left: 40px;">
+              <!--label for="hora">Hora: </label-->
+              <span class="input-group-text"><img src="../public/img/reloj.png" height="20px" width="20px" style="margin-right: 10px;">
+              <select name="hora" id="hora" class="form-control">
+                <option value="1">08:00 am</option>
+                <option value="2">08:30 am</option>
+                <option value="3">09:00 am</option>
+                <option value="4">09:30 am</option>
+                <option value="5">10:00 am</option>
+                <option value="6">10:30 am</option>
+                <option value="1">11:00 am</option>
+                <option value="2">11:30 am</option>
+                <option value="1">12:00 am</option>
+                <option value="2">12:30 am</option>
+                <option value="1">01:00 pm</option>
+              </select></span>
+           </div>
+      </div>
+      <br />
+      </div>
+      <div class="col">
+        <br />
+        <h3 class="card-title text-center" style="font-size: 20px;">Titulo de producto</h3>
+        <p class="card-text"><small class="text-muted">descripcion</small></p>
+        <p class="card-text">$2057</p>
+            <button type="submit" id="sub" value="COMPRAR" disabled="disabled" class="btn-lg" onclick="valida_envia()">COMPRAR</button>
+            <!--crea identificador del boton-->
+            <style>
+              button {
+                background-color: #966857;
+                border-color: #966857;
+                color: white;
+                font-family: 'Raleway', sans-serif;
+              }
+            </style>
+            <br />
+            <br />
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+
+
+
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  
+<div class="container-fluid fondofooter text-center">
+
+
+  <div class="row align-items-center">
+  
+      <div class="col-sm-4">
+          <ul>
+              <li>
+                  <a href="index.html">Home</a>
+              </li>
+              <li>
+                  <a href="servicios.html">Servicios</a>
+              </li>
+              <li>
+                  <a href="nosotros.html">Nosotros</a>
+              </li>
+              <li>
+                  <a href="contacto.html">Contacto</a>
+              </li>
+              <li>
+                  <a href="sedes.html">Sedes</a>
+              </li>
+              <li>
+                  <a href="login.html">Login</a>
+              </li>
+          </ul>
+      </div>
+  
+      <div class="col-sm-4 text-center">
+          <p>Horarios</p>
+          <p>​Lunes a Viernes 12 a 21hs <br>
+              Sábados 10 a 21hs <br>
+              Domingos y feriados 16 a 21hs <br>
+              <br>
+              ​Horario Administrativo: De Lunes a Sábado de 10 a 21hs
+          </p>
+      </div>
+  
+      <div class="col-sm-4 text-center">
+          <p>Contacto</p>
+          <p>011-458962351 / 2 <br>
+              011-456897856 / 5 <br>
+              consultas@spa.com <br>
+              <br>
+              Sede Barrio Norte:​Vicente López 2050
+          </p>
+      </div>
+  
+  </div>
+  
+  <div class="linea">
+  
+  </div>
+  
+  
+  <div class="row">
+      <div class="col align-self-start">
+          <img src="../public/img/logo.png" alt="logo del spa" width="80" height="auto">
+      </div>
+  
+      <div class="col  align-self-end">
+          <img class="iconos" src="../public/img/instagram.png" alt="logo instagram">
+  
+  
+          <img class="iconos" src="../public/img/facebook.png" alt="logo instagram">
+  
+  
+          <img class="iconos" src="../public/img/twitter.png" alt="logo instagram">
+      </div>
+  </div>
+  
+  
+  </div>
+  </html>
+  
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
