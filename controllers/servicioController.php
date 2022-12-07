@@ -13,29 +13,15 @@ class ServicioController{
     public $foto;
         
         public function index( $parametros = array() ){
+           
+            session_start();
+            
+          //   require_once('views/header.php');
+           
             $servicio = new ServicioModel();
             $listaServicios = $servicio->listar();
 
-            require_once('views/servicios.html');
-
-
-
-
-           /* session_start();
-
-            if ( isset( $_SESSION['email'] )) {
-                require_once('../models/servicioModel.php');
-                $model =new  ServicioModel();
-                $listaServicios = $model->listarServicios();
-                $email = $_SESSION['email'];
-    
-    
-                require_once('../views/serviciosView.php');
-            } else {
-                require_once('../views/accesoRestringidoView.php');
-            } */
-
-
+            require_once('views/servicios.php');
         
         }
         

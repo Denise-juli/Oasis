@@ -103,23 +103,42 @@
             </div>
         </div>
 
+<!--==================================================================================-->
 
 
-        <div class="container text-center">
-            <div class="row">
+<?php
+ foreach ($listaServicios as $servicio) {
+    $servicio_id = $servicio['servicio_id'];
+    $nombre = $servicio['nombre'];
+    $descripcion = $servicio['descripcion'];
+    $precio = $servicio['precio'];
+    $foto = $servicio['foto'];
+ }
+    // $arrLength = sizeof($listaProductos);
+    echo "
+        <div class='container text-center'>
+            <div class='row'>
 
-                <div class="col">
-                    <a href="detalle">
-                    <div class="card" style="width: 15rem;">
-                        <img src="public/img/c1.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">DÍA SPA - BASICO</h5>
-                            <p class="card-text">$0000</p>
+                <div class='col'>
+                    <a href='servicio/ver'>
+                    <div class='card' style='width: 15rem;'>
+                        <img src='$foto' class='card-img-top' alt='...'>
+                        <div class='card-body'>
+                            <h5 class='card-title'>$nombre</h5>
+                            <p class='card-text'>$precio</p>
                         </div>
                     </div>
                     </a>
                 </div>
+"
 
+?>
+
+                </div>
+
+
+
+                <!--
                 <div class="col">
                     <a href="detalle">
                     <div class="card" style="width: 15rem;">
@@ -259,10 +278,9 @@
                 </div>
  </a>
             </div>
+-->
 
 
-            <!--cierro cont-->
-        </div>
 
         <div class="benefi container text-center">
             <div class="row">
