@@ -28,9 +28,13 @@ class ServicioController{
         public function ver(){
             $id = $_GET['id'];
              $model =new  servicioModel();
-             $productoArr = $model->ver($id);
-            
-             
+   
+                   //   require_once('views/header.php');
+              
+
+               $listaServicios = $model->ver($id);
+     
+              require_once('views/detalle.php');
          
              
         }

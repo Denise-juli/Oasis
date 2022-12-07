@@ -56,20 +56,33 @@
       font-family: 'Raleway', sans-serif;
     }
   </style>
-<div class="container-fluid" style="margin-top: 60px; margin-bottom: 80px;">
-    <main class="container col">
-      <div class="card mb-3" >
-      <div class="row ">
-         <div class="col">
-           <img src="public/img/c5.png" class="img-fluid rounded-start" alt="..." >
+
+
+
+<?php
+ foreach ($listaServicios as $servicio) {
+    $servicio_id = $servicio['servicio_id'];
+    $nombre = $servicio['nombre'];
+    $descripcion = $servicio['descripcion'];
+    $precio = $servicio['precio'];
+    $foto = $servicio['foto'];
+ 
+    // $arrLength = sizeof($listaProductos);
+    echo "
+    <div class='container-fluid' style='margin-top: 60px; margin-bottom: 80px;'>
+    <main class='container col'>
+      <div class='card mb-3' >
+      <div class='row '>
+         <div class='col'>
+           <img src='$foto' class='img-fluid rounded-start' alt='...' >
          </div>
-     <div class="col">
-      <div class="card-body" >
-        <h5 class="card-title" style="font-family: Playfair Display; margin-top: 15px;">CIRCUITO DE HIDROTERAPIA </h5>
-        <p class="card-text">Baño Sauna + Baño Turco + Baño Finlandés + Piscina lúdica + Hidromasaje con ozonoterapia + Sala de relax con cromoterapia + Toallones + Infusiones</p>
+     <div class='col'>
+      <div class='card-body' >
+        <h5 class='card-title' style='font-family: Playfair Display; margin-top: 15px;'>$nombre</h5>
+        <p class='card-text'>$descripcion</p>
         <br/>
-        <p class="card-text"><small class="text-muted">$2045</small></p>
-        <button type="submit" id="sub" value="RESERVAR" class="btn-lg" onclick="valida_envia()">RESERVAR</button>
+        <p class='card-text'><small class='text-muted'>$precio</small></p>
+        <button type='submit' id='sub' value='RESERVAR' class='btn-lg' onclick='valida_envia()'>RESERVAR</button>
               <!--crea identificador del boton-->
               <style>
                 button {
@@ -85,7 +98,13 @@
     </div>
   </div>
 </div>
-            </div>
+</div>
+
+";
+              }
+              ?>
+
+      
 
 
 

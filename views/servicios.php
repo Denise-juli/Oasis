@@ -120,7 +120,7 @@
             <div class='row'>
 
                 <div class='col'>
-                    <a href='servicio/ver'>
+                    <a href='servicio/ver?id=$servicio_id'>
                     <div class='card' style='width: 15rem;'>
                         <img src='$foto' class='card-img-top' alt='...'>
                         <div class='card-body'>
@@ -135,7 +135,7 @@
 
 ?>
 
-              
+</div>     
 
 
 

@@ -60,6 +60,12 @@
         ));               
     }
 
+
+    public function ver($id){
+        $stament = $this->setQuery("SELECT * FROM servicio where servicio_id = $id limit 1;");
+        return $this->obtenerRow();
+    }
+
 // Desconecar DB
 private function desconectar(){
     $this->objPDO = null;
