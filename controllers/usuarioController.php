@@ -1,5 +1,7 @@
 <?php
-    require_once('../models/usuarioModel.php' );
+    require_once('models/usuarioModel.php' );
+
+
     class UsuarioController{
         public $nombre;
         //public $apellido;
@@ -49,11 +51,11 @@
             $usuario = new UsuarioModel();
             $usuario->nombre = $nombre;
             $usuario->email = $email;
-            $usuario->password = sha1( $password ) ;
+            $usuario->password = $password;
             //echo (  sha1('admin') );
             // Ejecuto el method del modelo
             $resultado = $usuario->login();
-            print_r($resultado[0]);
+            print_r($resultado[1]);
             //print_r($usuario);
 
             if( count( $resultado ) > 0  ) {
@@ -104,32 +106,5 @@
         }
     }
 
-?>
-
-
-
-
-
-
-
-
-
-
-<?php
-session_start();
-
-if( !isset($_SESSION['nivelUsuario']) || $_SESSION['nivelUsuario'] != "Admin" ){
-
-
-
-
-$cnx = mysqli_connect('localhost','root','','usuario');
-
-$c = "SELECT usuario_id ,nivelUsuario, IFNULL(nombre, '----') AS nombre IFNULL(apellido, '----') AS apellido, email, DATE_FORMAT( fechaNac, '%d/%m/%Y' ) AS fechaNac FROM usuario ORDER BY usuario_id DESC";
-$r = mysqli_query($cnx, $c);
-
-
-
-require_once('views/usuarioView.php');
 
 ?>

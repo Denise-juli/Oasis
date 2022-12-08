@@ -1,5 +1,5 @@
 <?php
-    require_once '../core/ConexionPDO.php';
+    require_once 'core/ConexionPDO.php';
 
 
 
@@ -44,12 +44,14 @@
 
         public function login(){
             $this->setQuery("SELECT  nombre, email, password
-                             WHERE email = :email AND password = :password");
-            $this->obtenerRow(array(
+                             WHERE email = :email AND password = :password;");
+            $resultado = $this->obtenerRow(array(
                 ':nombre' => $this->nombre,
                         ':email' => $this->email,
                         ':password' => $this->password
             ));
+
+            return $resultado;
         }
 
         

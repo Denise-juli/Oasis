@@ -97,8 +97,8 @@
         </style>
 
         <!--img src="img/logo.png" width="200" height="100"-->
- 
-        <form action="login.php" method="post">
+  <!--==========================CAMBIE ACTION=======================-->
+        <form action="./usuario/login" method="post">
           <input name="nombre" type="nombre" id="nombre" placeholder="Nombre" class="form-control">
           </br>
 
@@ -130,7 +130,7 @@
           <br />
           <div class="btn_login">
             <div class="d-grid gap-2">
-              <input type="submit" id="sub" value="INICIAR SESION" disabled="disabled" class="btn-lg" onclick="valida_envia()">
+              <input type="submit" value="INICIAR SESIÓN">
               <!--crea identificador del boton-->
             </div>
           </div>
@@ -171,7 +171,7 @@
 
 
 
-    <!--se habilita cuando hacemos click en condiciones-->
+    <!--
     <script type="text/javascript">
       var cb = document.getElementById('cb'); //puedo identificar y llamar al checkbox(cb)
       var sub = document.getElementById('sub'); //puedo identificar y llamar al boton(sub)
@@ -184,9 +184,10 @@
       }
       //si a checkbox no se le realizo un onclick, el boton esta desabilitado
     </script>
-
+  -->
 
     <!--para que avise si hay informacion incompleta-->
+        <!--
     <script type="text/javascript">
       function valida_envia() {
         //validar nombre
@@ -221,7 +222,7 @@
         }
       }
     </script>
-
+  -->
 
 </body>
 
