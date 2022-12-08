@@ -1,5 +1,5 @@
 <?php
-    require_once '../core/ConexionPDO.php';
+    require_once 'core/ConexionPDO.php';
 
 
     class TurnoModel extends ConexionDB {

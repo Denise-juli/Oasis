@@ -84,31 +84,43 @@
             }
             $email = $_POST['email'];
             $password = $_POST['password'];
-            $nombreUsuario = $_POST['nombre'];
-            $apellidoUsuario = $_POST['apellido'];
+            $nombre = $_POST['nombre'];
+            /*$apellido = $_POST['apellido'];
             $telefono = $_POST['telefono'];
-            $fecha_nacimiento = $_POST['fecha_nac'];
+            $fecha_nac = $_POST['fecha_nac'];
             $dateToFormat = date_create($fecha_nacimiento);
             $dateFormated = date_format($dateToFormat, "Y-m-d");
             $puntos = 0;
-            $tipo = 2;
+            $tipo = 2;*/
             // Intancio el modelo 
             $usuario = new UsuarioModel();
 
             $usuario->nombre = $nombre;
-            $usuario->apellido = $apellidoUsuario;
+            /*$usuario->apellido = $apellido;*/
             $usuario->email = $email;
             $usuario->password = $password;
-            $usuario->fecha_nac = $fecha_nacimiento;
+           /* $usuario->fecha_nac = $fecha_nac;
             $usuario->telefono = $telefono;
             $usuario->puntos = $puntos;
-            $usuario->fk_tipo_id = $tipo;
+            $usuario->fk_tipo_id = $tipo;*/
             
             $usuario->registro();
             // Voy al login
             header('Location: ../index');
+
+
+            if( isset($_GET[$fk_tipo_id = '1'])){
+                header('Location: ../indexABM');
+            }
+            if( isset($_GET[$fk_tipo_id = '2'])){
+                header('Location: ../index');
+            }
+            //var_dump($_SESSION);
             
-        }
+                        
+                    }
+            
+        
 
 
        

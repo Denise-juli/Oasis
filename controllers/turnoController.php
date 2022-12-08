@@ -1,6 +1,6 @@
 <?php
 
-    require_once('../models/turnoModel.php');
+    require_once('models/turnoModel.php');
 
     class TurnoController{
         public $turno_id;

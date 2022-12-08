@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../public/css/estilos.css">
+    <link rel="stylesheet" href="public/css/estilos.css">
     <title>PANEL ABM</title>
 </head>
 

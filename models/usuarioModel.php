@@ -15,7 +15,7 @@
         public $fk_tipo_id;
 
         public function guardar(){
-            $this->setQuery("INSERT INTO usuarios(nombre, apellido, email, passwordm, puntos, telefono, fecha_nac, fk_tipo_id	)
+            $this->setQuery("INSERT INTO usuario(nombre, apellido, email, passwordm, puntos, telefono, fecha_nac, fk_tipo_id	)
                             VALUES(:nombre,:apellido, :email, :password, :puntos, :telefono, :fk_tipo_id	)");
             $this->ejecutar(array(
                 ':nombre' => $this->nombre,
@@ -54,7 +54,22 @@
             return $resultado;
         }
 
+
+        public function registro() {
+            $this->setQuery("INSERT INTO usuario(nombre,  email, password,  fk_tipo_id	)
+            VALUES(:nombre, :email, :password, :fk_tipo_id	)");
+$this->ejecutar(array(
+':nombre' => $this->nombre,
+':email' => $this->email,
+':password' => $this->password,
+':fk_tipo_id' => $this->fk_tipo_id	
+
+));
+
+
+
+
         
 
     }
-?>
+    }
