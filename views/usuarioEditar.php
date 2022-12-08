@@ -20,7 +20,7 @@
 
 <body>
     <header class="d-flex justify-content-center align-items-center bg-dark text-light">
-        <img src="public/img/logo.png" height="100" width="200">
+    <img src='public/img/logo.png' height='100' width='200'>
         <h1><i class="bi bi-person"></i>ABM de Usuarios </h1>
     </header>
 
@@ -51,7 +51,7 @@
 echo "
 
                 <div class='card p-3'>
-                    <form action='./modificar' class='m-4'>
+                    <form action='./usuario/modificar' class='m-4'>
                         <div class='row mt-2'>
                             <div class='col-md-6'>
                                 <label for='nombre'>Nombre:</label>
@@ -100,8 +100,7 @@ echo "
 
                     <div class='row d-flex justify-content-evenly'>
                         <button href='indexABM' class='btn btn-outline-dark    col-md-4'>Cancelar</button>
-                        <a href='indexABM' class='btn btn-outline-danger col-md-4 '>Guardar</a>
-                        <input type="submit" class="btn btn-success btn-block btnSubmit" value="Guardar Cambios">
+                        <input type='submit' class='btn btn-outline-danger col-md-4' value='Guardar' onclick='actualizar()'>
                     </div>
 
                 </div>

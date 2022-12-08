@@ -50,7 +50,7 @@
             $oldEmail = $_POST['oldEmail'];
             $email = $_POST['email'];
             $nombre = $_POST['nombre'];
-          
+            $usuario_id = $_POST['usuario_id'];
             $apellido = $_POST['apellido'];
             $fecha_nac = $_POST['fecha_nac'];
             $puntos = $_POST['puntos'];
@@ -58,7 +58,7 @@
             $telefono = $_POST['telefono'];
             
             $model = new UsuarioModel();
-            $model->actualizar($nombre, $apellido, $email, $telefono,$fecha_nac, $puntos, $fk_tipo_id);
+            $model->actualizar($nombre, $apellido, $email, $telefono,$fecha_nac, $puntos, $fk_tipo_id, $usuario_id);
             header('Location: ../indexABM');
             
             }
