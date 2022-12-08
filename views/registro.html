@@ -45,7 +45,7 @@
                           <a  class="nav-link" href="sedes">Sedes</a>  
                           </li>
                           <li class="nav-item pr-3">
-                              <a class="nav-link" href="servicios">Servicios</a>  
+                              <a class="nav-link" href="servicio">Servicios</a>  
                               </li>
                               <li class="nav-item pr-3">
                                   <a class="nav-link" href="logIn">logIn</a>  
@@ -94,22 +94,34 @@
         <br />
         <br />
         <form action="./usuario/registro" method="post">
-          <input name="nombre" type="nombre" id="nombre" placeholder="Nombre" class="form-control">
+          <input name="nombre" type="text" id="nombre" placeholder="Nombre" class="form-control">
           </br>
+          
+          
+          <input name="apellido" type="text" id="apellido" placeholder="apellido" class="form-control">
+        </br>
 
           <!---label for="email">Email</label-->
           <input name="email" type="email" id="email" placeholder="Email" class="form-control">
           </br>
 
+
+          <input name="fecha_nac" type="date" id="fecha_nac" placeholder="fecha de nacimiento" class="form-control">
+          </br>
+
+            <input name="telefono" type="text" id="telefono" placeholder="telefono" class="form-control">
+          </br>
+
+
           <!--label for="password">Contraseña</label-->
           <input name="password" type="password" id="password" placeholder="Contraseña" class="form-control">
           </br>
 
-          <select name="acceso" id="acceso" class="form-control">
+        <!--  <select name="acceso" id="acceso" class="form-control">
             <option value="1">Admin</option>
             <option value="2">Usuario</option>
-          </select>
-          </br-->
+          </select> -->
+        
 
           <div>
             <label>
@@ -124,7 +136,7 @@
           <br />
           <div class="btn_login">
             <div class="d-grid gap-2">
-              <input type="submit" id="sub" value="REGISTRARSE" disabled="disabled" class="btn-lg" onclick="valida_envia()">
+              <input type="submit" id="sub" value="REGISTRARSE" disabled="disabled" class="btn-lg">
               <!--crea identificador del boton-->
             </div>
           </div>

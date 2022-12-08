@@ -51,13 +51,7 @@
         </div>
       </header>
 
-
-<!--<style>
-    body {
-      font-family: 'Raleway', sans-serif;
-    }
-  </style>-->
-
+<body>
 
 
 <?php
@@ -70,43 +64,82 @@
  
     // $arrLength = sizeof($listaProductos);
     echo "
-    <div class='container-fluid' style='margin-top: 60px; margin-bottom: 80px;'>
-    <main class='container col'>
+
+
+
+<div class='container-fluid' style='margin-top: 60px; margin-bottom: 80px;'>
+
+    <div class='container col'>
+
       <div class='card mb-3' >
+
       <div class='row '>
+
          <div class='col'>
            <img src='$foto' class='img-fluid rounded-start' alt='...' >
          </div>
-     <div class='col'>
-      <div class='card-body' >
-        <h5 class='card-title' style='font-family: Playfair Display; margin-top: 15px;'>$nombre</h5>
-        <p class='card-text'>$descripcion</p>
-        <br/>
-        <p class='card-text'><small class='text-muted'>$precio</small></p>
-        <a hreft='turnera.html'><button type='submit' id='sub' value='RESERVAR' class='btn-lg' onclick='valida_envia()'>RESERVAR</button></a>
-        <!--crea identificador del boton-->
-        <style>
-          button {
-            background-color: #966857;
-            border-color: #966857;
-            color: white;
-            font-family: 'Raleway', sans-serif;
-          }
-        </style>
 
+         <div class='col'>
+            <div class='card-body' >
+                <h5 class='card-title' style='font-family: Playfair Display; margin-top: 15px;'>$nombre</h5>
+                <p class='card-text'>$descripcion</p>
+                <br/>
+                <p class='card-text'><small class='text-muted'>$precio</small></p>
 
-</div>
-</div>
-</div>
-</div>
-</div>
-
-        ";
-      }
-      ?>
+                  <div class='btn_login'>
+                    <div class='d-grid gap-2'>
+                        <input type='submit' id='sub' value='RESERVAR' class='btn-lg'>
+                    </div>
+      
+                  </div>
+            </div>
+          </div>
       </div>
+      </div>
+      </div> 
 
-      <div class="container-fluid fondofooter text-center">
+
+
+
+    </div>  
+
+
+";
+              }
+                
+?>
+
+<style>
+      input {
+        background-color: #966857;
+        border-color: #966857;
+        color: white;
+        font-family: 'Raleway', sans-serif;
+      }
+    </style>
+
+<style>
+    body {
+      font-family: 'Raleway', sans-serif;
+    }
+  </style>
+ 
+      
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3 img-fluid/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+</body>
 
 <div class="container-fluid fondofooter text-center">
 

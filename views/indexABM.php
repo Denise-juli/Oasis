@@ -23,14 +23,16 @@
     
 <?php
 
-$listaUsuarios = $usuario->li();
-foreach ($listaUsuarios as $usuario) {
-   $usuario_id = $usuario['usuario_id'];
-   $nombre = $usuario['nombre'];
-   $apellido = $usuario['apellido'];
-   $email = $usuario['email'];
-   $fk_tipo_id = $usuario['fk_tipo_id'];
-   $puntos = $usuario['puntos'];
+$listaUsuarios = $abm->listar();
+foreach ($listaUsuarios as $abm) {
+   $usuario_id = $abm['usuario_id'];
+   $nombre = $abm['nombre'];
+   $apellido = $abm['apellido'];
+   $email = $abm['email'];
+   $fecha_nac = $abm['fecha_nac'];
+   $telefono = $abm['telefono'];
+   $fk_tipo_id = $abm['fk_tipo_id'];
+   $puntos = $abm['puntos'];
 
    // $arrLength = sizeof($listaProductos);
    echo "
@@ -54,8 +56,10 @@ foreach ($listaUsuarios as $usuario) {
                             <th>Nombre</th>
                             <th>Apellido</th>
                             <th>Email</th>
-                            <th>Rol</th>
+                            <th>Fecha_nac</th>
+                            <th>Telefono</th>
                             <th>Puntos</th>
+                            <th>Rol</th>
                             <th>Acciones</th>
                         </tr>
                     </thead>
@@ -66,6 +70,8 @@ foreach ($listaUsuarios as $usuario) {
                             <td>$nombre</td>
                             <td>$apellido</td>
                             <td>$email</td>
+                            <td>$fecha_nac</td>
+                            <td>$telefono</td>
                             <td>$puntos</td>
                             <td>$fk_tipo_id</td>
                             <td>

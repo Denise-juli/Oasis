@@ -7,7 +7,7 @@
         //public $apellido;
         public $password;
         public $email;
-        // public $puntos;
+        public $puntos;
         // public $telefono;
         //public $fecha_nac;
         //public $usuario_id;
@@ -85,24 +85,24 @@
             $email = $_POST['email'];
             $password = $_POST['password'];
             $nombre = $_POST['nombre'];
-            /*$apellido = $_POST['apellido'];
+            $apellido = $_POST['apellido'];
             $telefono = $_POST['telefono'];
             $fecha_nac = $_POST['fecha_nac'];
-            $dateToFormat = date_create($fecha_nacimiento);
+            $dateToFormat = date_create($fecha_nac);
             $dateFormated = date_format($dateToFormat, "Y-m-d");
-            $puntos = 0;
-            $tipo = 2;*/
+            $puntos = 10;
+            $tipo = 2;
             // Intancio el modelo 
             $usuario = new UsuarioModel();
 
             $usuario->nombre = $nombre;
-            /*$usuario->apellido = $apellido;*/
+            $usuario->apellido = $apellido;
             $usuario->email = $email;
             $usuario->password = $password;
-           /* $usuario->fecha_nac = $fecha_nac;
+            $usuario->fecha_nac = $fecha_nac;
             $usuario->telefono = $telefono;
             $usuario->puntos = $puntos;
-            $usuario->fk_tipo_id = $tipo;*/
+            $usuario->fk_tipo_id = $tipo;
             
             $usuario->registro();
             // Voy al login
