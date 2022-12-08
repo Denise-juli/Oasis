@@ -39,19 +39,16 @@
 
 
         public function login( $parametros = array() ){
-            if( !isset( $_POST['nombre'] ) && !isset( $_POST['email'] )  && !isset( $_POST['password']) ){
+            if( !isset( $_POST['email'] )  && !isset( $_POST['password']) ){
                 return;
             }
-
             // Recibo las variables por POST
-            $nombre = $_POST['nombre'];
             $email = $_POST['email'];
             $password = $_POST['password'];
             // Intancio el modelo 
             $usuario = new UsuarioModel();
-            $usuario->nombre = $nombre;
             $usuario->email = $email;
-            $usuario->password = $password;
+            $usuario->password =  $password  ;
             //echo (  sha1('admin') );
             // Ejecuto el method del modelo
             $resultado = $usuario->login();
@@ -62,10 +59,12 @@
                 echo 'Datos validos';
                 session_start();
                 $_SESSION['email'] = $resultado[0]['email'];
+          
                 header('Location: ../index');
             } else {
                 echo 'Usuario o contraseña invalidos';
             }
+
 
         }
         public function logout( $parametros = array() ){

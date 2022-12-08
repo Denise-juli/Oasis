@@ -43,10 +43,10 @@
         }
 
         public function login(){
-            $this->setQuery("SELECT  nombre, email, password
-                             WHERE email = :email AND password = :password;");
+            $this->setQuery("SELECT email, password, nombre
+                            FROM usuario
+                            WHERE email = :email AND password = :password;");
             $resultado = $this->obtenerRow(array(
-                ':nombre' => $this->nombre,
                         ':email' => $this->email,
                         ':password' => $this->password
             ));
