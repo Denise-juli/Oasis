@@ -57,6 +57,10 @@
                         WHERE servicio_id = :servicio_id");
         $this->ejecutar(array(
                         ':servicio_id' => $this->servicio_id,
+                        ':nombre' => $this->nombre,
+                ':descripcion' => $this->descripcion,
+                ':precio' => $this->precio,
+                ':foto' => $this->foto,
         ));               
     }
 

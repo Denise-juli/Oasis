@@ -149,7 +149,7 @@ $listaServicios = $servicio->listar();
                         </form>
                         </td>
                         <td>
-                            <a href='servicioEditar.html?id=1' class='btn btn-outline-dark'><img src='public/img/cambio.png'  height='20' width='20' ><i class='bi bi-pencil-square'></i></a>
+                            <a href='servicio/actualizar?id=$servicio_id' class='btn btn-outline-dark'><img src='public/img/cambio.png'  height='20' width='20' ><i class='bi bi-pencil-square'></i></a>
                             <a href='servicioEliminar.html?id=1' class='btn btn-outline-danger'><img src='public/img/cruz.png'  height='20' width='20' ><i class='bi bi-trash'></i></a>
                         </td>
                     </tr>"

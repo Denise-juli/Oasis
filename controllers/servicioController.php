@@ -13,15 +13,8 @@ class ServicioController{
     public $foto;
         
         public function index( $parametros = array() ){
-           
-            session_start();
-            
-          //   require_once('views/header.php');
-           
-            $servicio = new ServicioModel();
-            $listaServicios = $servicio->listar();
 
-            require_once('views/servicios.php');
+            require_once('views/serviciosView.php');
         
         }
         
@@ -30,9 +23,6 @@ class ServicioController{
             $id = $_GET['id'];
 
              $model =new  servicioModel();
-   
-                   //   require_once('views/header.php');
-              
 
                $listaServicios = $model->ver($id);
      
@@ -44,16 +34,26 @@ class ServicioController{
         public function crear( $parametros = array() ){
             // Recibo las variables por POST
             print_r( $parametros  );
-            echo 'Crear usuario';
-
-            // Intancio el modelo 
-
-            // Ejecuto las querys
+            echo 'Crear servicio';
+        }
+        
+        public function actualizar($parametros = array()){
+            $id = $_GET['id'];
+            $modelAct = new ServicioModel();
+            require_once('views/servicioEditar.php');
         }
 
-        public function actualizar($parametros = array()){
-            print_r( $parametros  );
-            echo 'Actualizado laputaquetepario';
+        public function modificar ($parametros = array()){
+        $servicio_id = $_POST['servicio_id'];
+        $nombre = $_POST['nombre'];
+        $descripcion = $_POST['descripcion'];
+        $precio = $_POST['precio'];
+        $foto = $_POST['foto'];
+           
+        $model = new ServicioModel();
+        $model->actualizar($servicio_id, $nombre, $descripcion, $precio, $foto);
+        header('Location: ../indexABM');
+        
         }
 
         public function eliminar( $parametros = array() ){
