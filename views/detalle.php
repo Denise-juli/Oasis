@@ -12,44 +12,44 @@
 </head>
 <body id="textos">
 <header class="" style=" color: #545454;">
-  <div class="container">
-    <nav class="navbar navbar-expand-lg aline-item-center text-uppercase pt-4">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">
-          <img src="public/img/logo.png" href="#" alt="" width="140" height="70" class="logo d-inline-block align-text-top"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="offcanvas offcanvas-end navi" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-          <div class="offcanvas-header">
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-          </div>
-          <div class="offcanvas-body">
-              <ul class="navbar-nav ms-auto ms-3">
-
-                <li class="nav-item pr-3">
-                <a class="nav-link" href="nosotros">Nosotros</a>  
-                </li>
-                
-                <li class="nav-item pr-3">
-                    <a class="nav-link" href="contacto">Contacto</a>  
-                    </li>
-                    <li class="nav-item pr-3">
-                        <a  class="nav-link" href="sedes">Sedes</a>  
-                        </li>
-                        <li class="nav-item pr-3">
-                            <a class="nav-link" href="servicios">Servicios</a>  
-                            </li>
-                            <li class="nav-item pr-3">
-                                <a class="nav-link" href="logIn">logIn</a>  
-                                </li>
-
-</ul>
-  </div>
+        <div class="container">
+          <nav class="navbar navbar-expand-lg aline-item-center text-uppercase pt-4">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index">
+                <img src="public/img/logo.png" href="#" alt="" width="140" height="70" class="logo d-inline-block align-text-top"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end navi" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav ms-auto ms-3">
+      
+                      <li class="nav-item pr-3">
+                      <a class="nav-link" href="nosotros">Nosotros</a>  
+                      </li>
+                      
+                      <li class="nav-item pr-3">
+                          <a class="nav-link" href="contacto">Contacto</a>  
+                          </li>
+                          <li class="nav-item pr-3">
+                              <a  class="nav-link" href="sedes">Sedes</a>  
+                              </li>
+                              <li class="nav-item pr-3">
+                                  <a class="nav-link" href="servicio">Servicios</a>  
+                                  </li>
+                                  <li class="nav-item pr-3">
+                                      <a class="nav-link" href="logIn">logIn</a>  
+                                      </li>
+      
+      </ul>
         </div>
-    </nav>
-  </div>
-</header>
+              </div>
+          </nav>
+        </div>
+      </header>
 
 
 <!--<style>
@@ -106,26 +106,7 @@
       ?>
       </div>
 
-
-
-             
-
-      
-
-
-
-
-
-
-
-
-
-
-
-  
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3 img-fluid/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
-</body>
+      <div class="container-fluid fondofooter text-center">
 
 <div class="container-fluid fondofooter text-center">
 
@@ -200,4 +181,7 @@
 
 
 </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
 </html>
