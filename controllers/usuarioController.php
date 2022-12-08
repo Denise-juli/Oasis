@@ -73,31 +73,49 @@
             session_unset();
             session_destroy();
             echo('<meta http-equiv="refresh" content="3; url=../usuario">');
-            echo( '<h2> Sesion cerrada, en 3 segundo...</h2>');
+            echo( '<h2> Sesion cerrada, en 3 segundos...</h2>');
 
         }
 
 
         public function registro( $parametros = array() ){
-            if( !isset( $_POST['nombre'] ) && !isset( $_POST['email'] )  && !isset( $_POST['password'])){
+            if( !isset( $_POST['email'] )  && !isset( $_POST['password'])){
                 return;
             }
-            // Recibo las variables por POST
-            $nombre = $_POST['nombre$nombre'];
             $email = $_POST['email'];
             $password = $_POST['password'];
+            $nombreUsuario = $_POST['nombre'];
+            $apellidoUsuario = $_POST['apellido'];
+            $telefono = $_POST['telefono'];
+            $fecha_nacimiento = $_POST['fecha_nac'];
+            $dateToFormat = date_create($fecha_nacimiento);
+            $dateFormated = date_format($dateToFormat, "Y-m-d");
+            $puntos = 0;
+            $tipo = 2;
             // Intancio el modelo 
             $usuario = new UsuarioModel();
+
             $usuario->nombre = $nombre;
+            $usuario->apellido = $apellidoUsuario;
             $usuario->email = $email;
-            $usuario->password = sha1( $password ) ;
-
-
+            $usuario->password = $password;
+            $usuario->fecha_nac = $fecha_nacimiento;
+            $usuario->telefono = $telefono;
+            $usuario->puntos = $puntos;
+            $usuario->fk_tipo_id = $tipo;
+            
             $usuario->registro();
             // Voy al login
-            header('Location: ../class/usuario');
+            header('Location: ../index');
             
         }
+
+
+       
+
+
+
+
 
         public function eliminar( $parametros = array() ){
             print_r( $parametros  );
