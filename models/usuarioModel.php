@@ -30,8 +30,17 @@
         }
 
 
+//MODIFICAR
 
+//listar
 
+public function listar(){
+    $this->setQuery("SELECT usuario_id, nombre, apellido,  email, telefono, fecha_nac, puntos, fk_tipo_id
+                    FROM usuario");
+    $resultado = $this->obtenerRow();
+    return $resultado;
+
+}
 
         public function eliminar(){
             $this->setQuery("DELETE usuario
@@ -56,13 +65,17 @@
 
 
         public function registro() {
-            $this->setQuery("INSERT INTO usuario(nombre,  email, password,  fk_tipo_id	)
-            VALUES(:nombre, :email, :password, :fk_tipo_id	)");
+            $this->setQuery("INSERT INTO usuario(nombre,  apellido, email, fecha_nac, telefono, password,  fk_tipo_id, puntos	)
+            VALUES(:nombre, :apellido, :email, :fecha_nac, :telefono, :password, :fk_tipo_id, :puntos	)");
 $this->ejecutar(array(
 ':nombre' => $this->nombre,
+':apellido' => $this->apellido,
 ':email' => $this->email,
+':fecha_nac' => $this->fecha_nac,
+':telefono' => $this->telefono,
 ':password' => $this->password,
-':fk_tipo_id' => $this->fk_tipo_id	
+':fk_tipo_id' => $this->fk_tipo_id,	
+':puntos' => $this->puntos	
 
 ));
 

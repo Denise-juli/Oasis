@@ -11,52 +11,46 @@
 </head>
 
 <header class="" style=" color: #545454;">
-  <div class="container">
-    <nav class="navbar navbar-expand-lg aline-item-center text-uppercase pt-4">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">
-          <img src="public/img/logo.png" href="#" alt="" width="140" height="70" class="logo d-inline-block align-text-top"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="offcanvas offcanvas-end navi" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-          <div class="offcanvas-header">
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-          </div>
-          <div class="offcanvas-body">
-              <ul class="navbar-nav ms-auto ms-3">
-
-                <li class="nav-item pr-3">
-                <a class="nav-link" href="nosotros">Nosotros</a>  
-                </li>
-                
-                <li class="nav-item pr-3">
-                    <a class="nav-link" href="contacto">Contacto</a>  
-                    </li>
-                    <li class="nav-item pr-3">
-                        <a  class="nav-link" href="sedes">Sedes</a>  
-                        </li>
-                        <li class="nav-item pr-3">
-                            <a class="nav-link" href="servicios">Servicios</a>  
-                            </li>
-                            <li class="nav-item pr-3">
-                                <a class="nav-link" href="logIn">logIn</a>  
-                                </li>
-
-</ul>
-            </div>
+        <div class="container">
+          <nav class="navbar navbar-expand-lg aline-item-center text-uppercase pt-4">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html">
+                <img src="public/img/logo.png" href="#" alt="" width="140" height="70" class="logo d-inline-block align-text-top"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end navi" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav ms-auto ms-3">
+      
+                      <li class="nav-item pr-3">
+                      <a class="nav-link" href="nosotros">Nosotros</a>  
+                      </li>
+                      
+                      <li class="nav-item pr-3">
+                          <a class="nav-link" href="contacto">Contacto</a>  
+                          </li>
+                          <li class="nav-item pr-3">
+                              <a  class="nav-link" href="sedes">Sedes</a>  
+                              </li>
+                              <li class="nav-item pr-3">
+                                  <a class="nav-link" href="servicio">Servicios</a>  
+                                  </li>
+                                  <li class="nav-item pr-3">
+                                      <a class="nav-link" href="logIn">logIn</a>  
+                                      </li>
+      
+      </ul>
+                  </div>
+              </div>
+          </nav>
         </div>
-    </nav>
-  </div>
-</header>
+      </header>
 
 <body>
-<style>
-    body {
-      font-family: 'Raleway', sans-serif;
-    }
-  </style>
-
 
 
 <?php
@@ -69,41 +63,66 @@
  
     // $arrLength = sizeof($listaProductos);
     echo "
-    <div class='container-fluid' style='margin-top: 60px; margin-bottom: 80px;'>
-    <main class='container col'>
+
+
+
+<div class='container-fluid' style='margin-top: 60px; margin-bottom: 80px;'>
+
+    <div class='container col'>
+
       <div class='card mb-3' >
+
       <div class='row '>
+
          <div class='col'>
            <img src='$foto' class='img-fluid rounded-start' alt='...' >
          </div>
-     <div class='col'>
-      <div class='card-body' >
-        <h5 class='card-title' style='font-family: Playfair Display; margin-top: 15px;'>$nombre</h5>
-        <p class='card-text'>$descripcion</p>
-        <br/>
-        <p class='card-text'><small class='text-muted'>$precio</small></p>
-        <button type='submit' id='sub' value='RESERVAR' class='btn-lg' onclick='valida_envia()'>RESERVAR</button>
-              <!--crea identificador del boton-->
-              <style>
-                button {
-                  background-color: #966857;
-                  border-color: #966857;
-                  color: white;
-                  font-family: 'Raleway', sans-serif;
-                }
-              </style>
 
+         <div class='col'>
+            <div class='card-body' >
+                <h5 class='card-title' style='font-family: Playfair Display; margin-top: 15px;'>$nombre</h5>
+                <p class='card-text'>$descripcion</p>
+                <br/>
+                <p class='card-text'><small class='text-muted'>$precio</small></p>
 
+                  <div class='btn_login'>
+                    <div class='d-grid gap-2'>
+                        <input type='submit' id='sub' value='RESERVAR' class='btn-lg'>
+                    </div>
+      
+                  </div>
+            </div>
+          </div>
       </div>
-    </div>
-  </div>
-</div>
-</div>
+      </div>
+      </div> 
+
+
+
+
+    </div>  
+
 
 ";
               }
-              ?>
+                
+?>
 
+<style>
+      input {
+        background-color: #966857;
+        border-color: #966857;
+        color: white;
+        font-family: 'Raleway', sans-serif;
+      }
+    </style>
+
+<style>
+    body {
+      font-family: 'Raleway', sans-serif;
+    }
+  </style>
+ 
       
 
 
