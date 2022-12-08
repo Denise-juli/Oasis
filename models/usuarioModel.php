@@ -42,7 +42,7 @@ public function listar(){
 
 }
 
-public function actualizar(){
+public function actualizar($nombre, $apellido, $email, $telefono,$fecha_nac, $puntos, $fk_tipo_id){
     $this->setQuery("UPDATE usuario
                     SET nombre = :nombre, 
                     apellido = :apellido,
@@ -51,9 +51,15 @@ public function actualizar(){
                     fecha_nac = :fecha_nac,
                     puntos = :puntos,
                     fk_tipo_id = :fk_tipo_id
-                    WHERE usuario_id = :usuario_id");
+                    WHERE email = :oldEmail;");
     $this->ejecutar(array(
-                    ':usuario_id' => $this->usuario_id
+                    ':usuario_id' => $this->usuario_id,
+                    ':nombre' => $this->nombre,
+                    ':apellido' => $this->apellido,
+                    ':email' => $this->email,
+                    ':puntos' => $this->puntos,
+                    ':telefono' => $this->telefono,
+                    ':fk_tipo_id' => $this->fk_tipo_id
     ));               
 }
 

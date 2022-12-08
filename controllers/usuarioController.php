@@ -33,15 +33,36 @@
 
         
         public function actualizar(){
+
             $id = $_GET['id'];
+
             $modelAct = new UsuarioModel();
     
           //  $abm = $modelAct->actualizar($id);
     
-             require_once('views/usuarioEditar.html');
-        
+             require_once('views/usuarioEditar.php');
     
         }
+
+  
+        public function modificar ($parametros = array()){
+           
+            $oldEmail = $_POST['oldEmail'];
+            $email = $_POST['email'];
+            $nombre = $_POST['nombre'];
+          
+            $apellido = $_POST['apellido'];
+            $fecha_nac = $_POST['fecha_nac'];
+            $puntos = $_POST['puntos'];
+            $fk_tipo_id = $_POST['fk_tipo_id'];
+            $telefono = $_POST['telefono'];
+            
+            $model = new UsuarioModel();
+            $model->actualizar($nombre, $apellido, $email, $telefono,$fecha_nac, $puntos, $fk_tipo_id);
+            header('Location: ../indexABM');
+            
+            }
+        
 
 
         public function login( $parametros = array() ){

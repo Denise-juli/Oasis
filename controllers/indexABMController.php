@@ -16,16 +16,7 @@ class IndexABMController {
 
     }
 
-    public function actualizar(){
-        $id = $_GET['id'];
-        $modelAct = new UsuarioModel();
 
-        $abm = $modelAct->actualizar($id);
-
-         require_once('views/usuarioEditar.html');
-    
-
-    }
 
 
     }
