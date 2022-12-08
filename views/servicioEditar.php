@@ -32,35 +32,47 @@
                 <h2 class="text-center">Alta de servicio</h2>
             </br>
 
+            <?php
+            $listaServicio = $modelAct->listar();
 
+            foreach ($listaServicio as $abm) {
+               $servicio_id = $abm['servicio_id'];
+               $nombre = $abm['nombre'];
+               $descripcion = $abm['descripcion'];
+               $precio = $abm['precio'];
+               $foto = $abm['foto'];
+              
+
+            }
           
-                <div class="card p-3">
-                    <form action="" class="m-4">
-                        <div class="row mt-2">
-                            <div class="col-md-6">
-                                <label for="nombre">idServicio</label>
-                                <input class="form-control" name="id_servicio" id="id_servicio" type="text">
+echo "
+                <div class='card p-3'>
+                    <form action='./servicio/modificar' class='m-4'>
+                        <div class='row mt-2'>
+                            <div class='col-md-6'>
+                                <label for='nombre'>idServicio</label>
+                                <input class='form-control' name='id_servicio' id='id_servicio' type='text'>
                             </div>
-                            <div class="col-md-6">
-                                <label for="nombre">Nombre</label>
-                                <input class="form-control" name="nombre" id="nombre" type="text">
+                            <div class='col-md-6'>
+                                <label for='nombre'>Nombre</label>
+                                <input class='form-control' name='nombre' id='nombre' type='text'>
                             </div>
-                            <div class="col-md-6">
-                                <label for="apellido">Descripcion</label>
-                                <input class="form-control" name="descripcion" id="descripcion" type="text">
+                            <div class='col-md-6'>
+                                <label for='apellido'>Descripcion</label>
+                                <input class='form-control' name='descripcion' id='descripcion' type='text'>
                             </div>
                         </div>
-                        <div class="row mt-3">
-                            <div class="col-md-6">
-                                <label for="email">Precio</label>
-                                <input class="form-control" name="precio" id="precio" type="text">
+                        <div class='row mt-3'>
+                            <div class='col-md-6'>
+                                <label for='email'>Precio</label>
+                                <input class='form-control' name='precio' id='precio' type='text'>
                             </div>
-                            <div class="col-md-6">
-                                <label for="rol">Foto</label>
+                            <div class='col-md-6'>
+                                <label for='rol'>Foto</label>
                                  </br>
-                                <form action="inicio.php" method="POST" enctype="multipart/form-data"/>
-                                <input name="archivo" id="archivo" type="file"/>
-                                <input type="submit" name="subir" value="Subir imagen" class="btn btn-danger"/>
+                                <form action='inicio.php' method='POST' enctype='multipart/form-data'/>
+                                <input name='archivo' id='archivo' type='file'/>
+                                <input type='submit' name='subir' value='Subir imagen' class='btn btn-danger'/>
                             </form>
                             </div>
                         </div>
@@ -68,9 +80,9 @@
                         
                     </form>
 
-                    <div class="row d-flex justify-content-evenly">
-                        <button href="index" class="btn btn-outline-dark    col-md-4">Cancelar</button>
-                        <a href="index" class="btn btn-outline-danger col-md-4 ">Guardar</a>
+                    <div class='row d-flex justify-content-evenly'>
+                        <button href='indexABM' class='btn btn-outline-dark    col-md-4'>Cancelar</button>
+                        <input type='submit' class='btn btn-outline-danger col-md-4' value='Guardar' onclick='actualizar()'>
                     </div>
 
                 </div>
@@ -81,6 +93,8 @@
 
 
     </main>
+    ";
+    ?>
 
 </br>
 </br>
@@ -98,7 +112,7 @@
 </br>
 </br>
     <footer class="d-flex justify-content-center align-items-center bg-dark text-light">
-        <p> ABM | <img src="../public/img/logo.png" height="40" width="80"></p>
+        <p> ABM | <img src="public/img/logo.png" height="40" width="80"></p>
     </footer>
    
 </body>
