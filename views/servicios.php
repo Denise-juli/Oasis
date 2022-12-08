@@ -12,7 +12,7 @@
 </head>
 
 <body id="textos">
-    <header class="" style=" color: #545454;">
+<header class="" style=" color: #545454;">
         <div class="container">
           <nav class="navbar navbar-expand-lg aline-item-center text-uppercase pt-4">
             <div class="container-fluid">
@@ -44,9 +44,11 @@
                                   <li class="nav-item pr-3">
                                       <a class="nav-link" href="logIn">logIn</a>  
                                       </li>
-      
+                                      <li><a class="nav-link" href="usuario/logout">LogOut</a></li>
+                                      
+     
       </ul>
-        </div>
+                  </div>
               </div>
           </nav>
         </div>
@@ -117,7 +119,7 @@
     // $arrLength = sizeof($listaProductos);
     echo "
         <div class='container text-center'>
-            <div class='row'>
+            <div class='row row-cols-1 row-cols-md-3 g-4'>
 
                 <div class='col'>
                     <a href='servicio/ver?id=$servicio_id'>
@@ -130,12 +132,15 @@
                     </div>
                     </a>
                 </div>
+                </div>
+                 
 ";
  } 
 
 ?>
 
-</div>     
+
+   
 
         <div class="benefi container text-center">
             <div class="row">

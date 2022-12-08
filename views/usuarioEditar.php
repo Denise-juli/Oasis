@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>editarUsuario</title>
-  <link rel="shortcut icon" href="public/img/flor.png" type="image/png">
+  <link rel="shortcut icon" href="../public/img/flor.png" type="image/png">
 
   <!-- Bootstrap CSS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,7 +20,7 @@
 
 <body>
     <header class="d-flex justify-content-center align-items-center bg-dark text-light">
-    <img src='public/img/logo.png' height='100' width='200'>
+    <img src='../public/img/logo.png' height='100' width='200'>
         <h1><i class="bi bi-person"></i>ABM de Usuarios </h1>
     </header>
 
@@ -51,7 +51,7 @@
 echo "
 
                 <div class='card p-3'>
-                    <form action='./usuario/modificar' class='m-4'>
+                    <form action='../usuario/modificar' class='m-4'>
                         <div class='row mt-2'>
                             <div class='col-md-6'>
                                 <label for='nombre'>Nombre:</label>

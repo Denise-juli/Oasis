@@ -42,7 +42,7 @@ public function listar(){
 
 }
 
-public function actualizar($nombre, $apellido, $email, $telefono,$fecha_nac, $puntos, $fk_tipo_id, $usuario_id){
+public function actualizar(){
     $this->setQuery("UPDATE usuario
                     SET nombre = :nombre, 
                     apellido = :apellido,
