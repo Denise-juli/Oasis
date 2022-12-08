@@ -26,7 +26,9 @@ class ServicioController{
         }
         
         public function ver(){
+           
             $id = $_GET['id'];
+
              $model =new  servicioModel();
    
                    //   require_once('views/header.php');
@@ -51,7 +53,7 @@ class ServicioController{
 
         public function actualizar($parametros = array()){
             print_r( $parametros  );
-            echo 'Actualizado';
+            echo 'Actualizado laputaquetepario';
         }
 
         public function eliminar( $parametros = array() ){

@@ -42,6 +42,21 @@ public function listar(){
 
 }
 
+public function actualizar(){
+    $this->setQuery("UPDATE usuario
+                    SET nombre = :nombre, 
+                    apellido = :apellido,
+                    email = :email,
+                    telefono = :telefono,
+                    fecha_nac = :fecha_nac,
+                    puntos = :puntos,
+                    fk_tipo_id = :fk_tipo_id
+                    WHERE usuario_id = :usuario_id");
+    $this->ejecutar(array(
+                    ':usuario_id' => $this->usuario_id
+    ));               
+}
+
         public function eliminar(){
             $this->setQuery("DELETE usuario
                              WHERE usuario_id = :usuario_id");
