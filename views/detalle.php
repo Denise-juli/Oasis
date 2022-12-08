@@ -1,15 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Detalle</title>
-  <link rel="shortcut icon" href="public/img/flor.png" type="image/png">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-  <link rel="stylesheet" href="public/css/estilos.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>servicios</title>
+    <link rel="shortcut icon" href="public/img/flor.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="public/css/estilos.css">
+    
 </head>
-
+<body id="textos">
 <header class="" style=" color: #545454;">
   <div class="container">
     <nav class="navbar navbar-expand-lg aline-item-center text-uppercase pt-4">
@@ -44,18 +45,18 @@
                                 </li>
 
 </ul>
-            </div>
+  </div>
         </div>
     </nav>
   </div>
 </header>
 
-<body>
-<style>
+
+<!--<style>
     body {
       font-family: 'Raleway', sans-serif;
     }
-  </style>
+  </style>-->
 
 
 
@@ -82,27 +83,32 @@
         <p class='card-text'>$descripcion</p>
         <br/>
         <p class='card-text'><small class='text-muted'>$precio</small></p>
-        <button type='submit' id='sub' value='RESERVAR' class='btn-lg' onclick='valida_envia()'>RESERVAR</button>
-              <!--crea identificador del boton-->
-              <style>
-                button {
-                  background-color: #966857;
-                  border-color: #966857;
-                  color: white;
-                  font-family: 'Raleway', sans-serif;
-                }
-              </style>
+        <a hreft='turnera.html'><button type='submit' id='sub' value='RESERVAR' class='btn-lg' onclick='valida_envia()'>RESERVAR</button></a>
+        <!--crea identificador del boton-->
+        <style>
+          button {
+            background-color: #966857;
+            border-color: #966857;
+            color: white;
+            font-family: 'Raleway', sans-serif;
+          }
+        </style>
 
 
+</div>
+</div>
+</div>
+</div>
+</div>
+
+        ";
+      }
+      ?>
       </div>
-    </div>
-  </div>
-</div>
-</div>
 
-";
-              }
-              ?>
+
+
+             
 
       
 
