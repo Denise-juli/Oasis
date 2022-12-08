@@ -46,7 +46,7 @@
                                       </li>
       
       </ul>
-                  </div>
+        </div>
               </div>
           </nav>
         </div>
@@ -137,152 +137,6 @@
 
 </div>     
 
-
-
-                <!--
-                <div class="col">
-                    <a href="detalle">
-                    <div class="card" style="width: 15rem;">
-                        <img src="public/img/c2.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">DÍA SPA - RELAX</h5>
-                            <p class="card-text">$0000</p>
-                        </div>
-                    </div>
-                </a>
-                </div>
-
-                <div class="col">
-                    <a href="detalle">
-                    <div class="card" style="width: 15rem;">
-                        <img src="public/img/c3.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">DIA SPA - PAREJAS</h5>
-                            <p class="card-text">$0000</p>
-                        </div>
-                    </div>
-                    </a>
-                </div>
-
-                <div class="col">
-                    <a href="detalle">
-                    <div class="card" style="width: 15rem;">
-                        <img src="public/img/c4.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">REGALA DIA DE SPA</h5>
-                            <p class="card-text">$0000</p>
-                        </div>
-                    </div>
-                </a>
-                </div>
-
-
-
-
-                <div class="col">
-                    <a href="detalle">
-                    <div class="card" style="width: 15rem;">
-                        <img src="public/img/c5.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">CIRCUITO HIDRICO</h5>
-                            <p class="card-text">$0000</p>
-                        </div>
-                    </div>
-                </a>
-                </div>
-
-                <div class="col">
-                    <a href="detalle">
-                    <div class="card" style="width: 15rem;">
-                        <img src="public/img/c6.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">SAUNA</h5>
-                            <p class="card-text">$0000</p>
-                        </div>
-                    </div>
-                </a>
-                </div>
-
-                <div class="col">
-                    <a href="detalle">
-                    <div class="card" style="width: 15rem;">
-                        <img src="public/img/c7.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">MANOS Y PIES</h5>
-                            <p class="card-text">$0000</p>
-                        </div>
-                    </div>
-                </a>
-                </div>
-
-                <div class="col">
-                    <a href="detalle">
-                    <div class="card" style="width: 15rem;">
-                        <img src="public/img/c8.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">MASAJES</h5>
-                            <p class="card-text">$0000</p>
-                        </div>
-                    </div>
-                </a>
-                </div>
-
-
-
-
-
-                <div class="col">
-                    <a href="detalle">
-                    <div class="card" style="width: 15rem;">
-                        <img src="public/img/c9.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">FANGOTERAPIA</h5>
-                            <p class="card-text">$0000</p>
-                        </div>
-                    </div>
-                    </a>
-                </div>
-
-                <div class="col">
-                    <a href="detalle">
-                    <div class="card" style="width: 15rem;">
-                        <img src="public/img/c10.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">AROMATERAPIA</h5>
-                            <p class="card-text">$0000</p>
-                        </div>
-                    </div>
-                </a>
-                </div>
-
-                <div class="col">
-                    <a href="detalle">
-                    <div class="card" style="width: 15rem;">
-                        <img src="public/img/c11.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">LIMPIEZA FACIAL</h5>
-                            <p class="card-text">$0000</p>
-                        </div>
-                    </div>
-                </a>
-                </div>
-
-                <div class="col">
-                    <a href="detalle">
-                    <div class="card" style="width: 15rem;">
-                        <img src="public/img/c12.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">DRENAJE LINFATICO</h5>
-                            <p class="card-text">$0000</p>
-                        </div>
-                    </div>
-                </div>
- </a>
-            </div>
--->
-
-
-
         <div class="benefi container text-center">
             <div class="row">
                 <div class="col-sm-4">
@@ -307,21 +161,6 @@
                 </div>
             </div>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         <!--ultimo div-->
     </div>

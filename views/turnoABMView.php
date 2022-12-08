@@ -21,6 +21,11 @@
                     </tr>
                     
                     <?php
+                    
+                    $id = $_GET['id'];
+             $model =new  ProductoModel();
+             $productoArr = $model->ver($id);
+
                         for ($i=0; $i < count($lista) ; $i++) { 
                             $id =  $lista[$i]['turno_id'];
                             $nombre = $lista[$i]['fecha_res'];
