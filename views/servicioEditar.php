@@ -20,7 +20,7 @@
 
 <body>
     <header class="d-flex justify-content-center align-items-center bg-dark text-light">
-        <img src="public/img/logo.png" height="100" width="200">
+        <img src="../public/img/logo.png" height="100" width="200">
         <h1><i class="bi bi-person"></i> ABM de Servicios </h1>
     </header>
 
@@ -47,30 +47,26 @@
           
 echo "
                 <div class='card p-3'>
-                    <form action='./servicio/modificar' class='m-4'>
+                    <form action='servicio/modificar' class='m-4'>                   
                         <div class='row mt-2'>
                             <div class='col-md-6'>
-                                <label for='nombre'>idServicio</label>
-                                <input class='form-control' name='id_servicio' id='id_servicio' type='text'>
-                            </div>
-                            <div class='col-md-6'>
                                 <label for='nombre'>Nombre</label>
-                                <input class='form-control' name='nombre' id='nombre' type='text'>
+                                <input class='form-control' name='nombre' values='$nombre' type='text'>
                             </div>
                             <div class='col-md-6'>
                                 <label for='apellido'>Descripcion</label>
-                                <input class='form-control' name='descripcion' id='descripcion' type='text'>
+                                <input class='form-control' name='descripcion' values='$descripcion' type='text'>
                             </div>
                         </div>
-                        <div class='row mt-3'>
+                        <div class='row mt-2'>
                             <div class='col-md-6'>
                                 <label for='email'>Precio</label>
-                                <input class='form-control' name='precio' id='precio' type='text'>
+                                <input class='form-control' name='precio' values='$precio' type='text'>
                             </div>
                             <div class='col-md-6'>
                                 <label for='rol'>Foto</label>
                                  </br>
-                                <form action='inicio.php' method='POST' enctype='multipart/form-data'/>
+                                <form action='servicio/modificar' method='POST' enctype='multipart/form-data'/>
                                 <input name='archivo' id='archivo' type='file'/>
                                 <input type='submit' name='subir' value='Subir imagen' class='btn btn-danger'/>
                             </form>

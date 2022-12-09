@@ -56,7 +56,6 @@
                         precio = :precio
                         WHERE servicio_id = :servicio_id");
         $this->ejecutar(array(
-                        ':servicio_id' => $this->servicio_id,
                         ':nombre' => $this->nombre,
                 ':descripcion' => $this->descripcion,
                 ':precio' => $this->precio,
@@ -66,7 +65,7 @@
 
 
     public function ver($id){
-        $stament = $this->setQuery("SELECT * FROM servicio where servicio_id = $id limit 1;");
+        $stament = $this->setQuery("SELECT * FROM servicio where servicio_id = $id;");
         return $this->obtenerRow();
     }
 
