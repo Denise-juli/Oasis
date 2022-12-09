@@ -57,8 +57,8 @@ class ServicioController{
         }
 
         public function eliminar( $parametros = array() ){
-            print_r( $parametros  );
-            echo 'Eliminando usuario';
+         //   print_r( $parametros  );
+            echo 'Eliminando servicio';
         }
     }
 

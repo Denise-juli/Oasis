@@ -64,7 +64,8 @@ public function actualizar(){
 }
 
         public function eliminar(){
-            $this->setQuery("DELETE usuario
+            $this->setQuery("DELETE 
+                             FROM usuario
                              WHERE usuario_id = :usuario_id");
             
             $this->ejecutar(array(

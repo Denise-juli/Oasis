@@ -174,7 +174,7 @@
 
 
         public function eliminar( $parametros = array() ){
-            print_r( $parametros  );
+            //print_r( $parametros  );
             echo 'Eliminando usuario';
         }
     }
