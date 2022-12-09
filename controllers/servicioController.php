@@ -14,7 +14,9 @@ class ServicioController{
         
         public function index( $parametros = array() ){
 
-            require_once('views/serviciosView.php');
+            $servicio = new servicioModel();
+            require_once('views/servicios.php');
+
         
         }
         
@@ -22,7 +24,7 @@ class ServicioController{
            
             $id = $_GET['id'];
 
-             $model =new  servicioModel();
+             $model = new  servicioModel();
 
                $listaServicios = $model->ver($id);
      

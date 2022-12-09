@@ -109,6 +109,7 @@
 
 
 <?php
+$listaServicios = $servicio->listar();
  foreach ($listaServicios as $servicio) {
     $servicio_id = $servicio['servicio_id'];
     $nombre = $servicio['nombre'];
@@ -169,7 +170,12 @@
 
         <!--ultimo div-->
     </div>
-    <div class="container-fluid fondofooter text-center">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+
+<div class="container-fluid fondofooter text-center">
 
 
 <div class="row align-items-center">
@@ -242,8 +248,5 @@
 
 
 </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-</body>
 
 </html>
