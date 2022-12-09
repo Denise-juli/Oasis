@@ -47,6 +47,9 @@
   
         public function modificar ($parametros = array()){
            
+
+            
+
             $oldEmail = $_POST['oldEmail'];
             $email = $_POST['email'];
             $nombre = $_POST['nombre'];
@@ -61,6 +64,10 @@
             $model->actualizar($nombre, $apellido, $email, $telefono,$fecha_nac, $puntos, $fk_tipo_id, $usuario_id);
             header('Location: ../indexABM');
             
+
+
+
+
             }
         
 
@@ -94,13 +101,23 @@
 
 
         }
+
         public function logout( $parametros = array() ){
-            session_start();
-            unset( $_SESSION['email'] );
-            session_unset();
-            session_destroy();
-            echo('<meta http-equiv="refresh" content="3; url=../usuario">');
-            echo( '<h2> Sesion cerrada, en 3 segundos...</h2>');
+
+                  
+                session_start();
+                unset( $_SESSION['email'] );
+                session_unset();
+                session_destroy();
+                echo('<meta http-equiv="refresh" content="3; url=../index">');
+                echo( '<h2> Sesion cerrada, en 3 segundos...</h2>');
+            
+              //Redireccionamos a la pagina index.php
+            
+            
+            
+          
+
 
         }
 

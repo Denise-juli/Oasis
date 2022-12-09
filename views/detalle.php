@@ -2,21 +2,24 @@
 <html lang="es">
 
 <head>
-    <meta charset="utf-8">
+    <!-- Required meta tags -->
+    <meta charset="utf-10">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>servicios</title>
-    <link rel="shortcut icon" href="public/img/flor.png" type="image/png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="public/css/estilos.css">
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha3104-1BmE4kWBq710iYhFldvKuhfTAU10auU10tT94WrHftjDbrCEXSU1oBoqyl2QvZ10jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="../public/css/estilos.css">
+
+    <title>detalle</title>
+    <link rel="shortcut icon" href="../public/img/flor.png" type="image/png">
 </head>
-<body id="textos">
+
+<body>
+  
 <header class="" style=" color: #545454;">
         <div class="container">
           <nav class="navbar navbar-expand-lg aline-item-center text-uppercase pt-4">
             <div class="container-fluid">
-              <a class="navbar-brand" href="index">
-                <img src="public/img/logo.png" href="#" alt="" width="140" height="70" class="logo d-inline-block align-text-top"></a>
+              <a class="navbar-brand" href="../index">
+                <img src="../public/img/logo.png" href="#" alt="" width="140" height="70" class="logo d-inline-block align-text-top"></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -43,18 +46,17 @@
                                   <li class="nav-item pr-3">
                                       <a class="nav-link" href="logIn">logIn</a>  
                                       </li>
-      
+                                      <li><a class="nav-link" href="../usuario/logout">LogOut</a></li>
+                                      
+     
       </ul>
-        </div>
+                  </div>
               </div>
           </nav>
         </div>
       </header>
 
-<body>
-
-
-<?php
+      <?php
  foreach ($listaServicios as $servicio) {
     $servicio_id = $servicio['servicio_id'];
     $nombre = $servicio['nombre'];
@@ -76,7 +78,7 @@
       <div class='row '>
 
          <div class='col'>
-           <img src='$foto' class='img-fluid rounded-start' alt='...' >
+           <img src='../$foto' class='img-fluid rounded-start' alt='...' >
          </div>
 
          <div class='col'>
@@ -123,21 +125,8 @@
       font-family: 'Raleway', sans-serif;
     }
   </style>
- 
-      
 
 
-
-
-
-
-
-
-
-
-
-  
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3 img-fluid/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
 </body>
 
@@ -198,21 +187,20 @@
 
 <div class="row">
     <div class="col align-self-start">
-        <img src="public/img/logo.png" alt="logo del spa" width="80" height="auto">
+        <img src="../public/img/logo.png" alt="logo del spa" width="80" height="auto">
     </div>
 
     <div class="col  align-self-end">
-        <img class="iconos" src="public/img/instagram.png" alt="logo instagram">
+        <img class="iconos" src="../public/img/instagram.png" alt="logo instagram">
 
 
-        <img class="iconos" src="public/img/facebook.png" alt="logo instagram">
+        <img class="iconos" src="../public/img/facebook.png" alt="logo instagram">
 
 
-        <img class="iconos" src="public/img/twitter.png" alt="logo instagram">
+        <img class="iconos" src="../public/img/twitter.png" alt="logo instagram">
     </div>
 </div>
 
 
 </div>
-</body>
 </html>
