@@ -83,19 +83,6 @@ foreach ($listaUsuarios as $abm) {
             ?>
 
 
-
-
-
-
-
-  
-     
- 
-
-
-
-
-
 <?php
 
 echo "    </br>
@@ -245,32 +232,11 @@ $listaServicios = $servicio->listar();
 </br>
 
 
-
-
-
-
-
-
-
-
-
-
 </div>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
     </main>
-  
-
 
     <footer class="d-flex justify-content-center align-items-center bg-dark text-light">
         <p> ABM | <img src="public/img/logo.png" height="40" width="80"></p>

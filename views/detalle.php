@@ -50,7 +50,7 @@
                                       
      
       </ul>
-                  </div>
+        </div>
               </div>
           </nav>
         </div>
@@ -64,7 +64,6 @@
     $precio = $servicio['precio'];
     $foto = $servicio['foto'];
  
-    // $arrLength = sizeof($listaProductos);
     echo "
 
 

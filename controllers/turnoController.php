@@ -15,20 +15,12 @@
 
     
             require_once('views/turnoABMView.php');
-          
-
-            // print_r($lista);
-            //echo '<h1> Renderizo Vista</h1>';
         }
 
         public function crear( $parametros = array() ){
-            // Recibo las variables por POST
             print_r( $parametros  );
             echo 'Crear usuario';
 
-            // Intancio el modelo 
-
-            // Ejecuto las querys
         }
 
         public function actualizar($parametros = array()){

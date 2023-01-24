@@ -4,13 +4,9 @@
 
     class UsuarioController{
         public $nombre;
-        //public $apellido;
         public $password;
         public $email;
         public $puntos;
-        // public $telefono;
-        //public $fecha_nac;
-        //public $usuario_id;
  
 
         public function index( $parametros = array() ){
@@ -22,13 +18,8 @@
         }
 
         public function crear( $parametros = array() ){
-            // Recibo las variables por POST
             print_r( $parametros  );
             echo 'Crear usuario';
-
-            // Intancio el modelo 
-
-            // Ejecuto las querys
         }
 
         
@@ -38,8 +29,6 @@
 
             $modelAct = new UsuarioModel();
     
-          //  $abm = $modelAct->actualizar($id);
-    
              require_once('views/usuarioEditar.php');
     
         }
@@ -47,9 +36,6 @@
   
         public function modificar ($parametros = array()){
            
-
-            
-
             $oldEmail = $_POST['oldEmail'];
             $email = $_POST['email'];
             $nombre = $_POST['nombre'];
@@ -76,19 +62,13 @@
             if( !isset( $_POST['email'] )  && !isset( $_POST['password']) ){
                 return;
             }
-            // Recibo las variables por POST
             $email = $_POST['email'];
             $password = $_POST['password'];
-            // Intancio el modelo 
             $usuario = new UsuarioModel();
             $usuario->email = $email;
             $usuario->password =  $password  ;
-            //echo (  sha1('admin') );
-            // Ejecuto el method del modelo
             $resultado = $usuario->login();
             print_r($resultado[1]);
-            //print_r($usuario);
-
             if( count( $resultado ) > 0  ) {
                 echo 'Datos validos';
                 session_start();
@@ -112,13 +92,6 @@
                 echo('<meta http-equiv="refresh" content="3; url=../index">');
                 echo( '<h2> Sesion cerrada, en 3 segundos...</h2>');
             
-              //Redireccionamos a la pagina index.php
-            
-            
-            
-          
-
-
         }
 
 
@@ -136,7 +109,6 @@
             $dateFormated = date_format($dateToFormat, "Y-m-d");
             $puntos = 10;
             $tipo = 2;
-            // Intancio el modelo 
             $usuario = new UsuarioModel();
 
             $usuario->nombre = $nombre;
@@ -149,7 +121,6 @@
             $usuario->fk_tipo_id = $tipo;
             
             $usuario->registro();
-            // Voy al login
             header('Location: ../index');
 
 
@@ -159,22 +130,10 @@
             if( isset($_GET[$fk_tipo_id = '2'])){
                 header('Location: ../index');
             }
-            //var_dump($_SESSION);
-            
                         
                     }
             
-        
-
-
-       
-
-
-
-
-
         public function eliminar( $parametros = array() ){
-            //print_r( $parametros  );
             echo 'Eliminando usuario';
         }
     }

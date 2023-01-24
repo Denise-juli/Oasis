@@ -34,7 +34,6 @@ class ServicioController{
         }
 
         public function crear( $parametros = array() ){
-            // Recibo las variables por POST
             print_r( $parametros  );
             echo 'Crear servicio';
         }
@@ -59,7 +58,6 @@ class ServicioController{
         }
 
         public function eliminar( $parametros = array() ){
-         //   print_r( $parametros  );
             echo 'Eliminando servicio';
         }
     }

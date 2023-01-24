@@ -48,7 +48,7 @@
                                       
      
       </ul>
-                  </div>
+        </div>
               </div>
           </nav>
         </div>
@@ -105,7 +105,6 @@
             </div>
         </div>
 
-<!--==================================================================================-->
 
 
 <?php
@@ -117,7 +116,6 @@ $listaServicios = $servicio->listar();
     $precio = $servicio['precio'];
     $foto = $servicio['foto'];
  
-    // $arrLength = sizeof($listaProductos);
     echo "
         <div class='container text-center'>
             <div class='row row-cols-1 row-cols-md-3 g-4'>
@@ -168,7 +166,6 @@ $listaServicios = $servicio->listar();
             </div>
         </div>
 
-        <!--ultimo div-->
     </div>
 
 
