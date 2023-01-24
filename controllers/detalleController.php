@@ -15,6 +15,22 @@ class DetalleController {
          require_once('views/detalle.php');
     }
 
+
+
+    //---------------------COMENTARIOS-----------------------------
+
+    public function addComentario(){
+
+        $model = new ServicioModel();
+        $fk_servicio = $_GET['id'];
+        $contenido = $_POST['comentario'];
+        $calificacion = $_POST['calificacion'];
+        $model->addComentario($contenido, $calificacion, $fk_servicio);
+        header("Location:../detalle/ver?id=$fk_servicio");
+        
+    }
+
+
     }
 
 ?>

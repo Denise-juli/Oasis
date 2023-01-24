@@ -31,20 +31,20 @@
                     <ul class="navbar-nav ms-auto ms-3">
       
                       <li class="nav-item pr-3">
-                      <a class="nav-link" href="nosotros">Nosotros</a>  
+                      <a class="nav-link" href="../nosotros">Nosotros</a>  
                       </li>
                       
                       <li class="nav-item pr-3">
-                          <a class="nav-link" href="contacto">Contacto</a>  
+                          <a class="nav-link" href="../contacto">Contacto</a>  
                           </li>
                           <li class="nav-item pr-3">
-                              <a  class="nav-link" href="sedes">Sedes</a>  
+                              <a  class="nav-link" href="../sedes">Sedes</a>  
                               </li>
                               <li class="nav-item pr-3">
-                                  <a class="nav-link" href="servicio">Servicios</a>  
+                                  <a class="nav-link" href="../servicio">Servicios</a>  
                                   </li>
                                   <li class="nav-item pr-3">
-                                      <a class="nav-link" href="logIn">logIn</a>  
+                                      <a class="nav-link" href="../logIn">logIn</a>  
                                       </li>
                                       <li><a class="nav-link" href="../usuario/logout">LogOut</a></li>
                                       

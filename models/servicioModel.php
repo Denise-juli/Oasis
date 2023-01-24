@@ -69,9 +69,37 @@
         return $this->obtenerRow();
     }
 
+
+
+    //---------------------COMENTARIOS-----------------------------
+
+    public function addComentario($contenido, $calificacion, $id_servicio ){
+        $this->setQuery("INSERT INTO comentario (contenido, calificacion, fk_servicio) VALUES (:contenido, :calificacion, :fk_servicio)");
+           $this->ejecutar(array(
+                   ':contenido' => $contenido,
+                   ':calificacion'=> $calificacion,
+                   ':fk_servicio' => $id_servicio
+           ));
+        }
+
+    
+        public function comentariosPorServicio($id_xcomentario){
+            $this->setQuery("SELECT id_comentario, contenido, YEAR(fecha_comentario) AS anio, DAY(fecha_comentario) AS dia, MONTH(fecha_comentario) AS mes, TIME(fecha_comentario) AS hora, calificacion FROM comentario WHERE fk_servicio = $id;
+            ");
+            $resultado = $this->obtenerRow();
+            return $resultado;
+        }
+
+
 // Desconecar DB
 private function desconectar(){
     $this->objPDO = null;
 }
+
+
+
+
+
+
     }
 
