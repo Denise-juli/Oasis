@@ -65,26 +65,29 @@
 
 
     public function ver($id){
-        $stament = $this->setQuery("SELECT * FROM servicio where servicio_id = $id;");
+        $this->setQuery("SELECT * FROM servicio where servicio_id = $id limit 1;");
         return $this->obtenerRow();
     }
 
 
 
+
+
+
     //---------------------COMENTARIOS-----------------------------
 
-    public function addComentario($contenido, $calificacion, $id_servicio ){
-        $this->setQuery("INSERT INTO comentario (contenido, calificacion, fk_servicio) VALUES (:contenido, :calificacion, :fk_servicio)");
+    public function addComentario($contenido, $calificacion, $servicio_id ){
+        $this->setQuery("INSERT INTO comentario (contenido, calificacion, servicio_id) VALUES (:contenido, :calificacion, :servicio_id)");
            $this->ejecutar(array(
                    ':contenido' => $contenido,
                    ':calificacion'=> $calificacion,
-                   ':fk_servicio' => $id_servicio
+                   ':servicio_id' => $servicio_id
            ));
         }
 
     
-        public function comentariosPorServicio($id_xcomentario){
-            $this->setQuery("SELECT id_comentario, contenido, YEAR(fecha_comentario) AS anio, DAY(fecha_comentario) AS dia, MONTH(fecha_comentario) AS mes, TIME(fecha_comentario) AS hora, calificacion FROM comentario WHERE fk_servicio = $id;
+        public function comentariosPorServicio($id){
+            $this->setQuery("SELECT id_comentario, contenido, calificacion FROM comentario WHERE servicio_id = $id;
             ");
             $resultado = $this->obtenerRow();
             return $resultado;

@@ -7,7 +7,7 @@ class DetalleController {
 
     public function ver(){
         session_start();
-        $id = $_GET['id'];
+        $id = $_GET['id']; 
          
           $servicio = new ServicioModel();
           $listaServicios = $servicio->ver($id);
@@ -22,61 +22,20 @@ class DetalleController {
     public function addComentario(){
 
         $model = new ServicioModel();
-        $fk_servicio = $_GET['id'];
-        $contenido = $_POST['comentario'];
+        $servicio_id = $_GET['servicio_id'];
+        $contenido = $_POST['contenido'];
         $calificacion = $_POST['calificacion'];
-        $model->addComentario($contenido, $calificacion, $fk_servicio);
-        header("Location:../detalle/ver?id=$fk_servicio");
+        $model->addComentario($contenido, $calificacion, $servicio_id);
+        $model->comentariosPorServicio($servicio_id);
+        header("Location:../detalle/ver?id= $servicio_id");
         
     }
 
 
-    }
 
-class ProductService {
-    private $servername = "localhost";
-    private $username = "usuario_id";
-    private $password = "password";
-    private $dbname = "bd_oasis";
-    private $conn;
 
     
-    function __construct($servername, $username, $password, $dbname) {
-        $this->servername = $servername;
-        $this->username = $username;
-        $this->password = $password;
-        $this->dbname = $dbname;
+
     }
-
-    function displayProducts() {
-        // connect to the database
-        $conn = new mysqli($this->servername, $this->username, $this->password, $this->dbname);
-
-        // check connection
-        if ($conn->connect_error) {
-            die("Conexion fallida: " . $conn->connect_error);
-        }
-
-        // fetch products from the database
-        $sql = "SELECT * FROM servicio";
-        $result = $conn->query($sql);
-
-        if ($result->num_rows > 0) {
-            // output data of each row
-            while($row = $result->fetch_assoc()) {
-                echo "Nombre del Servicio: " . $row["nombre"]. " - Precio: $" . $row["precio"]. "<br>";
-            }
-        } else {
-            echo "No se encontro el servicio.";
-        }
-
-        $conn->close();
-    }
-}
-
-// example usage
-$product = new ProductService("localhost", "usuario_id", "password", "bd_oasis");
-$product->displayProducts();
-?>
 
 ?>
