@@ -15,6 +15,7 @@ class ServicioController{
         public function index( $parametros = array() ){
 
             $servicio = new servicioModel();
+            
             require_once('views/servicios.php');
 
         
@@ -27,11 +28,25 @@ class ServicioController{
              $model = new  servicioModel();
 
                $listaServicios = $model->ver($id);
+               $comentarios = $model->comentariosPorServicio($id);
      
               require_once('views/detalle.php');
          
              
         }
+
+
+        public function addComentario(){
+
+            $model = new ServicioModel();
+            $servicio_id = $_GET['fkid'];
+            $contenido = $_POST['contenido'];
+            $calificacion = $_POST['calificacion'];
+            $model->addComentario($contenido, $calificacion, $servicio_id);
+            header("Location:../detalle/ver?id= $servicio_id");
+            
+        }
+
 
         public function crear( $parametros = array() ){
             print_r( $parametros  );

@@ -11,7 +11,7 @@ class DetalleController {
          
           $servicio = new ServicioModel();
           $listaServicios = $servicio->ver($id);
-
+          //$comentarios = $servicio->comentariosPorServicio($id);
          require_once('views/detalle.php');
     }
 
@@ -21,12 +21,13 @@ class DetalleController {
 
     public function addComentario(){
 
+
+
         $model = new ServicioModel();
-        $servicio_id = $_GET['servicio_id'];
+        $servicio_id = $_POST['servicio_id'];
         $contenido = $_POST['contenido'];
         $calificacion = $_POST['calificacion'];
         $model->addComentario($contenido, $calificacion, $servicio_id);
-        $model->comentariosPorServicio($servicio_id);
         header("Location:../detalle/ver?id= $servicio_id");
         
     }

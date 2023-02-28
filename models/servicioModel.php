@@ -77,17 +77,19 @@
     //---------------------COMENTARIOS-----------------------------
 
     public function addComentario($contenido, $calificacion, $servicio_id ){
-        $this->setQuery("INSERT INTO comentario (contenido, calificacion, servicio_id) VALUES (:contenido, :calificacion, :servicio_id)");
+        $pruebaUs=0;
+        $this->setQuery("INSERT INTO comentario (contenido, calificacion, fk_servicio_id, usuario_id) VALUES (:contenido, :calificacion, :fk_servicio_id, :usuario_id)");
            $this->ejecutar(array(
                    ':contenido' => $contenido,
                    ':calificacion'=> $calificacion,
-                   ':servicio_id' => $servicio_id
+                   ':servicio_id' => $servicio_id,
+                   ':usuario_id' => $pruebaUs
            ));
         }
 
     
         public function comentariosPorServicio($id){
-            $this->setQuery("SELECT id_comentario, contenido, calificacion FROM comentario WHERE servicio_id = $id;
+            $this->setQuery("SELECT id_comentario, contenido, calificacion FROM comentario WHERE fk_servicio_id = $id;
             ");
             $resultado = $this->obtenerRow();
             return $resultado;
