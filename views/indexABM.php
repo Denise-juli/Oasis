@@ -38,7 +38,7 @@ foreach ($listaUsuarios as $abm) {
    $fecha_nac = $abm['fecha_nac'];
    $telefono = $abm['telefono'];
    $fk_tipo_id = $abm['fk_tipo_id'];
-   $puntos = $abm['puntos'];
+   //$puntos = $abm['puntos'];
 
 
    echo "
@@ -56,7 +56,7 @@ foreach ($listaUsuarios as $abm) {
                             <th>Email</th>
                             <th>Fecha_nac</th>
                             <th>Telefono</th>
-                            <th>Puntos</th>
+                            
                             <th>Rol</th>
                             <th>Acciones</th>
                         </tr>
@@ -70,7 +70,7 @@ foreach ($listaUsuarios as $abm) {
                             <td>$email</td>
                             <td>$fecha_nac</td>
                             <td>$telefono</td>
-                            <td>$puntos</td>
+                            
                             <td>$fk_tipo_id</td>
                             <td>
                                 <a href='usuario/actualizar?id=$usuario_id' class='btn btn-outline-dark'><img src='public/img/cambio.png'  height='20' width='20' ><i class='bi bi-pencil-square'></i></a>

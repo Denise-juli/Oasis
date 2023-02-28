@@ -11,18 +11,17 @@
         public $password;
         public $telefono;
         public $fecha_nac;
-        public $puntos;
+
         public $fk_tipo_id;
 
         public function guardar(){
-            $this->setQuery("INSERT INTO usuario(nombre, apellido, email, passwordm, puntos, telefono, fecha_nac, fk_tipo_id	)
-                            VALUES(:nombre,:apellido, :email, :password, :puntos, :telefono, :fk_tipo_id	)");
+            $this->setQuery("INSERT INTO usuario(nombre, apellido, email, passwordm, telefono, fecha_nac, fk_tipo_id	)
+                            VALUES(:nombre,:apellido, :email, :password, :telefono, :fk_tipo_id	)");
             $this->ejecutar(array(
                 ':nombre' => $this->nombre,
                 ':apellido' => $this->apellido,
                 ':email' => $this->email,
                 ':password' => $this->password,
-                ':puntos' => $this->puntos,
                 ':telefono' => $this->telefono,
                 ':fk_tipo_id' => $this->fk_tipo_id	
                 
@@ -35,7 +34,7 @@
 //listar
 
 public function listar(){
-    $this->setQuery("SELECT usuario_id, nombre, apellido,  email, telefono, fecha_nac, puntos, fk_tipo_id
+    $this->setQuery("SELECT usuario_id, nombre, apellido,  email, telefono, fecha_nac, fk_tipo_id
                     FROM usuario");
     $resultado = $this->obtenerRow();
     return $resultado;
@@ -49,7 +48,6 @@ public function actualizar(){
                     email = :email,
                     telefono = :telefono,
                     fecha_nac = :fecha_nac,
-                    puntos = :puntos,
                     fk_tipo_id = :fk_tipo_id
                     WHERE usuario_id = :usuario_id;");
     $this->ejecutar(array(
@@ -57,7 +55,6 @@ public function actualizar(){
                     ':nombre' => $this->nombre,
                     ':apellido' => $this->apellido,
                     ':email' => $this->email,
-                    ':puntos' => $this->puntos,
                     ':telefono' => $this->telefono,
                     ':fk_tipo_id' => $this->fk_tipo_id
     ));               
@@ -73,22 +70,19 @@ public function actualizar(){
             ));
         }
 
-        public function login(){
-            $this->setQuery("SELECT email, password, nombre
+        public function login($em, $pass){
+            $this->setQuery("SELECT *
                             FROM usuario
-                            WHERE email = :email AND password = :password;");
-            $resultado = $this->obtenerRow(array(
-                        ':email' => $this->email,
-                        ':password' => $this->password
-            ));
+                            WHERE email = '$em' and password = '$pass'");
+            $resultado = $this->obtenerRow();
 
             return $resultado;
         }
 
 
         public function registro() {
-            $this->setQuery("INSERT INTO usuario(nombre,  apellido, email, fecha_nac, telefono, password,  fk_tipo_id, puntos	)
-            VALUES(:nombre, :apellido, :email, :fecha_nac, :telefono, :password, :fk_tipo_id, :puntos	)");
+            $this->setQuery("INSERT INTO usuario(nombre,  apellido, email, fecha_nac, telefono, password,  fk_tipo_id	)
+            VALUES(:nombre, :apellido, :email, :fecha_nac, :telefono, :password, :fk_tipo_id	)");
 $this->ejecutar(array(
 ':nombre' => $this->nombre,
 ':apellido' => $this->apellido,
@@ -96,8 +90,8 @@ $this->ejecutar(array(
 ':fecha_nac' => $this->fecha_nac,
 ':telefono' => $this->telefono,
 ':password' => $this->password,
-':fk_tipo_id' => $this->fk_tipo_id,	
-':puntos' => $this->puntos	
+':fk_tipo_id' => $this->fk_tipo_id
+//':puntos' => $this->puntos	
 
 ));
 

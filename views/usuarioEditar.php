@@ -43,7 +43,6 @@
                 $fecha_nac = $abm['fecha_nac'];
                 $telefono = $abm['telefono'];
                 $fk_tipo_id = $abm['fk_tipo_id'];
-                $puntos = $abm['puntos'];
 
             }
 
@@ -90,10 +89,7 @@ echo "
                                 <label for='password2'>Repetir Contraseña</label>
                                 <input class='form-control' name='password2' id='password2' type='text'>
                             </div-->
-                               <div class='col-md-6'>
-                                <label for='password2'>Puntos</label>
-                                <input  class='form-control' name='puntos' id='puntos' type='text'>
-                               </div>
+
                         </div>
                        
                     </form>
