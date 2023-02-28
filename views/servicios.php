@@ -6,15 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>servicios</title>
     <link rel="shortcut icon" href="public/img/flor.png" type="image/png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="public/css/estilos.css">
-    
+
 </head>
 
 <body id="textos">
 
 
-      <div id="servicios">
+    <div id="servicios">
 
     </div>
 
@@ -24,7 +25,7 @@
 
         <div class="padre text-center">
             <div class="row align-items-end">
-                
+
 
             </div>
         </div>
@@ -64,22 +65,22 @@
             </div>
         </div>
 
-
-
-<?php
-$listaServicios = $servicio->listar();
- foreach ($listaServicios as $servicio) {
-    $servicio_id = $servicio['servicio_id'];
-    $nombre = $servicio['nombre'];
-    $descripcion = $servicio['descripcion'];
-    $precio = $servicio['precio'];
-    $foto = $servicio['foto'];
- 
-    echo "
         <div class='container text-center'>
-            <div class='row row-cols-1 row-cols-md-3 g-4'>
+            <div class='row'>
 
-                <div class='col'>
+        <?php
+        $listaServicios = $servicio->listar();
+        foreach ($listaServicios as $servicio) {
+            $servicio_id = $servicio['servicio_id'];
+            $nombre = $servicio['nombre'];
+            $descripcion = $servicio['descripcion'];
+            $precio = $servicio['precio'];
+            $foto = $servicio['foto'];
+
+            echo "
+
+
+                <div class='col-6 col-sm-4'>
                     <a href='detalle?id=$servicio_id'>
                     <div class='card' style='width: 15rem;'>
                         <img src='$foto' class='card-img-top' alt='...'>
@@ -90,15 +91,19 @@ $listaServicios = $servicio->listar();
                     </div>
                     </a>
                 </div>
-                </div>
+                
+
+                
                  
 ";
- } 
+        }
 
-?>
+        ?>
+                    </div>
+        </div>
 
 
-   
+
 
         <div class="benefi container text-center">
             <div class="row">
@@ -128,79 +133,81 @@ $listaServicios = $servicio->listar();
     </div>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
 </body>
 
 <div class="container-fluid fondofooter text-center">
 
 
-<div class="row align-items-center">
+    <div class="row align-items-center">
 
-    <div class="col-sm-4">
-        <ul>
-            <li>
-                <a href="index">Home</a>
-            </li>
-            <li>
-                <a href="servicios">Servicios</a>
-            </li>
-            <li>
-                <a href="nosotros">Nosotros</a>
-            </li>
-            <li>
-                <a href="contacto">Contacto</a>
-            </li>
-            <li>
-                <a href="sedes">Sedes</a>
-            </li>
-            <li>
-                <a href="login">Login</a>
-            </li>
-        </ul>
+        <div class="col-sm-4">
+            <ul>
+                <li>
+                    <a href="index">Home</a>
+                </li>
+                <li>
+                    <a href="servicios">Servicios</a>
+                </li>
+                <li>
+                    <a href="nosotros">Nosotros</a>
+                </li>
+                <li>
+                    <a href="contacto">Contacto</a>
+                </li>
+                <li>
+                    <a href="sedes">Sedes</a>
+                </li>
+                <li>
+                    <a href="login">Login</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-sm-4 text-center">
+            <p>Horarios</p>
+            <p>​Lunes a Viernes 12 a 21hs <br>
+                Sábados 10 a 21hs <br>
+                Domingos y feriados 16 a 21hs <br>
+                <br>
+                ​Horario Administrativo: De Lunes a Sábado de 10 a 21hs
+            </p>
+        </div>
+
+        <div class="col-sm-4 text-center">
+            <p>Contacto</p>
+            <p>011-458962351 / 2 <br>
+                011-456897856 / 5 <br>
+                consultas@spa.com <br>
+                <br>
+                Sede Barrio Norte:​Vicente López 2050
+            </p>
+        </div>
+
     </div>
 
-    <div class="col-sm-4 text-center">
-        <p>Horarios</p>
-        <p>​Lunes a Viernes 12 a 21hs <br>
-            Sábados 10 a 21hs <br>
-            Domingos y feriados 16 a 21hs <br>
-            <br>
-            ​Horario Administrativo: De Lunes a Sábado de 10 a 21hs
-        </p>
+    <div class="linea">
+
     </div>
 
-    <div class="col-sm-4 text-center">
-        <p>Contacto</p>
-        <p>011-458962351 / 2 <br>
-            011-456897856 / 5 <br>
-            consultas@spa.com <br>
-            <br>
-            Sede Barrio Norte:​Vicente López 2050
-        </p>
+
+    <div class="row">
+        <div class="col align-self-start">
+            <img src="public/img/logo.png" alt="logo del spa" width="80" height="auto">
+        </div>
+
+        <div class="col  align-self-end">
+            <img class="iconos" src="public/img/instagram.png" alt="logo instagram">
+
+
+            <img class="iconos" src="public/img/facebook.png" alt="logo instagram">
+
+
+            <img class="iconos" src="public/img/twitter.png" alt="logo instagram">
+        </div>
     </div>
-
-</div>
-
-<div class="linea">
-
-</div>
-
-
-<div class="row">
-    <div class="col align-self-start">
-        <img src="public/img/logo.png" alt="logo del spa" width="80" height="auto">
-    </div>
-
-    <div class="col  align-self-end">
-        <img class="iconos" src="public/img/instagram.png" alt="logo instagram">
-
-
-        <img class="iconos" src="public/img/facebook.png" alt="logo instagram">
-
-
-        <img class="iconos" src="public/img/twitter.png" alt="logo instagram">
-    </div>
-</div>
 
 
 </div>
