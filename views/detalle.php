@@ -119,20 +119,23 @@
         <form action="./addComentario?fkid=$servicio_id" method='POST'>
             <div class="col-lg-8">
             <label for="" class="form-label">
-            <textarea name="contenido" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>                
+            <textarea name="comentario" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>                
             </label>
-            <input name="calificacion" rows="3" id="exampleFormControlTwextareal" placeholder="Calificacion" class="form-control">
+            <input name="calif" type="number" rows="3" id="exampleFormControlTwextareal" placeholder="Calificacion" class="form-control">
+            
             </div>
             <div class="col-lg-8">
-            <button class='btn btn-md btn-secondary mt-2'>Publicar</button>
+            <button type="submit" class='btn btn-md btn-secondary mt-2'>Publicar</button>
             </div>
         </form>
     </blockquote>
 
   </div>
-</div>
+</div> 
 
 
+
+                             
 
 
     <?php

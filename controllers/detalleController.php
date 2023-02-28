@@ -19,18 +19,7 @@ class DetalleController {
 
     //---------------------COMENTARIOS-----------------------------
 
-    public function addComentario(){
 
-
-
-        $model = new ServicioModel();
-        $servicio_id = $_POST['servicio_id'];
-        $contenido = $_POST['contenido'];
-        $calificacion = $_POST['calificacion'];
-        $model->addComentario($contenido, $calificacion, $servicio_id);
-        header("Location:../detalle/ver?id= $servicio_id");
-        
-    }
 
 
 

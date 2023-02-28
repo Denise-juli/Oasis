@@ -40,10 +40,11 @@ class ServicioController{
 
             $model = new ServicioModel();
             $servicio_id = $_GET['fkid'];
-            $contenido = $_POST['contenido'];
-            $calificacion = $_POST['calificacion'];
+            $contenido = $_POST['comentario'];
+            $calificacion = $_POST['calif'];
+      
             $model->addComentario($contenido, $calificacion, $servicio_id);
-            header("Location:../detalle/ver?id= $servicio_id");
+            header("Location:../detalle/ver?id=$servicio_id");
             
         }
 
