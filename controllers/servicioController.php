@@ -44,7 +44,7 @@ class ServicioController{
             $calificacion = $_POST['calif'];
       
             $model->addComentario($contenido, $calificacion, $servicio_id);
-            header("Location:../detalle/ver?id=$servicio_id");
+            header("Location:../servicio/ver?id=$servicio_id");
             
         }
 

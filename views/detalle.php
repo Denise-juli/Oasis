@@ -105,33 +105,33 @@
     </div>  
 
 
-";
-              }
 
-              ?>
 
-<div class="card w-25 m-auto">
-  <div class="card-header">
+<div class='card w-25 m-auto'>
+  <div class='card-header'>
     Deja tu comentario aqui: 
   </div>
-  <div class="card-body">
-    <blockquote class="blockquote mb-0">
-        <form action="./addComentario?fkid=$servicio_id" method='POST'>
-            <div class="col-lg-8">
-            <label for="" class="form-label">
-            <textarea name="comentario" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>                
+  <div class='card-body'>
+    <blockquote class='blockquote mb-0'>
+        <form action='./addComentario?fkid=$servicio_id' method='POST'>
+            <div class='col-lg-8'>
+            <label for='' class='form-label'>
+            <textarea name='comentario' class='form-control' id='exampleFormControlTextarea1' rows='3'></textarea>                
             </label>
-            <input name="calif" type="number" rows="3" id="exampleFormControlTwextareal" placeholder="Calificacion" class="form-control">
+            <input name='calif' type='number' rows='3' id='exampleFormControlTwextareal' placeholder='Calificacion' class='form-control'>
             
             </div>
-            <div class="col-lg-8">
-            <button type="submit" class='btn btn-md btn-secondary mt-2'>Publicar</button>
+            <div class='col-lg-8'>
+            <button type='submit' class='btn btn-md btn-secondary mt-2'>Publicar</button>
             </div>
         </form>
     </blockquote>
 
   </div>
-</div> 
+</div> ";
+}
+
+?>
 
 
 
