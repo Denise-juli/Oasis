@@ -52,8 +52,20 @@ class ServicioController{
 
 
         public function crear( $parametros = array() ){
-            print_r( $parametros  );
-            echo 'Crear servicio';
+            $servicio_id = $_POST['servicio_id'];
+            $nombre = $_POST['nombre'];
+            $descripcion = $_POST['descripcion'];
+            $precio = $_POST['precio'];
+            $foto = $_POST['foto'];
+            $model = new ServicioModel();
+            $model->servicio_id = $servicio_id;
+            $model->nombre = $nombre;
+            $model->descripcion = $descripcion;
+            $model->precio = $precio;
+            $model->foto = $foto;
+
+            $model->guardar($servicio_id, $nombre, $descripcion, $precio, $foto);
+            header('Location: ../indexABM'); 
         }
         
         public function actualizar($parametros = array()){

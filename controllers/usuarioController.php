@@ -93,28 +93,7 @@ class UsuarioController
         }
     }
 
-    /*
-    if($resultado != NULL){
-    session_start();
-    $_SESSION['fk'] = $fk;
-    header('Location: ../index');
-    } else{
-    header('Location: ../login');
-    }
-    
-    }
-    }
-    print_r($resultado[1]);
-    if( count( $resultado ) > 0  ) {
-    echo 'Datos validos';
-    session_start();
-    $_SESSION['email'] = $resultado[0]['email'];
-    
-    header('Location: ../index');
-    } else {
-    echo 'Usuario o contraseña invalidos';
-    }
-    } */
+
 
 
 

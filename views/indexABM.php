@@ -12,7 +12,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="stylesheet" src="public/css/estilos.css">
 
 </head>
@@ -20,28 +21,28 @@
 
 
 <body>
-<header class='d-flex justify-content-center align-items-center bg-dark text-light'>
-        <h1> <i class='bi bi-person'></i> ABM   </h1>
-        <img src='public/img/logo.png' height='100' width='200'>
-    </header>
-    </br>
-    <h2 class='d-flex justify-content-center align-items-center'>Personas</h2>
-    </br>
-<?php
+  <header class='d-flex justify-content-center align-items-center bg-dark text-light'>
+    <h1> <i class='bi bi-person'></i> ABM </h1>
+    <img src='public/img/logo.png' height='100' width='200'>
+  </header>
+  </br>
+  <h2 class='d-flex justify-content-center align-items-center'>Personas</h2>
+  </br>
+  <?php
 
-$listaUsuarios = $abm->listar();
-foreach ($listaUsuarios as $abm) {
-   $usuario_id = $abm['usuario_id'];
-   $nombre = $abm['nombre'];
-   $apellido = $abm['apellido'];
-   $email = $abm['email'];
-   $fecha_nac = $abm['fecha_nac'];
-   $telefono = $abm['telefono'];
-   $fk_tipo_id = $abm['fk_tipo_id'];
-   //$puntos = $abm['puntos'];
+  $listaUsuarios = $abm->listar();
+  foreach ($listaUsuarios as $abm) {
+    $usuario_id = $abm['usuario_id'];
+    $nombre = $abm['nombre'];
+    $apellido = $abm['apellido'];
+    $email = $abm['email'];
+    $fecha_nac = $abm['fecha_nac'];
+    $telefono = $abm['telefono'];
+    $fk_tipo_id = $abm['fk_tipo_id'];
+    //$puntos = $abm['puntos'];
+  
 
-
-   echo "
+    echo "
 
     <main class='container'>
         <div class='row mt-4'>
@@ -77,15 +78,15 @@ foreach ($listaUsuarios as $abm) {
                                 <a href='usuario/eliminar?id=$usuario_id' class='btn btn-outline-danger'><img src='public/img/cruz.png'  height='20' width='20' ><i class='bi bi-trash'></i></a>
                             </td>
                         </tr>";
-}
+  }
 
 
-            ?>
+  ?>
 
 
-<?php
+  <?php
 
-echo "    </br>
+  echo "    </br>
 <h2 class='d-flex justify-content-center align-items-center'>Servicios</h2>
 <style>
     h2 {
@@ -95,18 +96,18 @@ echo "    </br>
   </style> ";
 
 
-$listaServicios = $servicio->listar();
- foreach ($listaServicios as $servicio) {
+  $listaServicios = $servicio->listar();
+  foreach ($listaServicios as $servicio) {
     $servicio_id = $servicio['servicio_id'];
     $nombre = $servicio['nombre'];
     $descripcion = $servicio['descripcion'];
     $precio = $servicio['precio'];
     $foto = $servicio['foto'];
- 
-   
-    echo 
-    
-    " </br>
+
+
+    echo
+
+      " </br>
     <div class='row mt-4'>
         <div class='col-md-1'></div>
         <div class='col-md-8'>
@@ -140,65 +141,38 @@ $listaServicios = $servicio->listar();
                             <a href='servicio/eliminar?id=$servicio_id' class='btn btn-outline-danger'><img src='public/img/cruz.png'  height='20' width='20' ><i class='bi bi-trash'></i></a>
                         </td>
                     </tr>"
-    
-    
-    
-    ;}
-    ?>
-
-    
-                        
 
 
 
-                      
-                    </tbody>
-                </table>
-            </div>
-        </div>
-</div>
-
-
-
-        
-</br>
-<section>
-    <h3>Agregar usuario</h3>
-    <style>
-      h3 {
-        color: #966857;
-        font-family: "Playfair Display";
-      }
-    </style>
-    <br />
-    <form action="agregarUsuario.php" method="POST" >
-    <div class="input-group"  >
-      <input type="text"  class="form-control" placeholder="Nombre" name="nombre" id="nombre">
-      <input type="text"  class="form-control" placeholder="Apellido" name="apellido" id="apellido">
-      <input type="text"  class="form-control" placeholder="Email" name="email" id="email">
-      
-      <select name="acceso" id="acceso" class="form-control" name="acceso">
-        <option value="1">Admin</option>
-        <option value="2">Usuario</option>
-      </select>
-      <a href="agregarUsuario.php?id=2"><button class="btn-lg" type="button"><img src="public/img/enter.png" height="20" width="20"></button></a>
-      <style>
-        button {
-          background-color: #966857;
-          border-color: #966857;
-          color: white;
-        }
-      </style>
-    </div>
-  </section>
-</br>
+    ;
+  }
+  ?>
 
 
 
 
-        
-</br>
-<section>
+
+
+
+  </tbody>
+  </table>
+  </div>
+  </div>
+  </div>
+
+
+
+
+  </br>
+
+  </br>
+
+
+
+
+
+  </br>
+  <section>
     <h3>Agregar servicio</h3>
     <style>
       h3 {
@@ -207,46 +181,46 @@ $listaServicios = $servicio->listar();
       }
     </style>
     <br />
-    <form action="agregarServicio.php" method="POST" >
-    <div class="input-group"  >
-      <input type="text"  class="form-control" placeholder="id" name="id" id="id">
-      <input type="text"  class="form-control" placeholder="Nombre" name="nombre" id="nombre">
-      <input type="text"  class="form-control" placeholder="Descripcion" name="descripcion" id="descripcion">
-      <input type="text"  class="form-control" placeholder="Precio" name="precio" id="precio">
-      
-      <form action="inicio.php" method="POST" enctype="multipart/form-data"/>
-      <input name="archivo" id="archivo" type="file"/>
-      <input type="submit" name="subir" value="Subir imagen" class="btn btn-danger"/>
-      </form>
-      
-      <a href="agregarServicio.php?id=2"><button class="btn-lg" type="button"><img src="public/img/enter.png" height="20" width="20"></button></a>
-      <style>
-        button {
-          background-color: #966857;
-          border-color: #966857;
-          color: white;
-        }
-      </style>
+    <form action="servicio/crear" method="POST">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="id" name="servicio_id" id="id">
+        <input type="text" class="form-control" placeholder="Nombre" name="nombre" id="nombre">
+        <input type="text" class="form-control" placeholder="Descripcion" name="descripcion" id="descripcion">
+        <input type="text" class="form-control" placeholder="Precio" name="precio" id="precio">
+
+        
+        <input name="foto" id="archivo" type="file" />
+    </form>
+
+    <button class="btn-lg" type="submit"><img src="public/img/enter.png" height="20"
+          width="20">cargar</button></a>
+    <style>
+      button {
+        background-color: #966857;
+        border-color: #966857;
+        color: white;
+      }
+    </style>
     </div>
   </section>
-</br>
+  </br>
 
 
-</div>
-
-</body>
-</html>
-    </main>
-
-    <footer class="d-flex justify-content-center align-items-center bg-dark text-light">
-        <p> ABM | <img src="public/img/logo.png" height="40" width="80"></p>
-    </footer>
-
-
+  </div>
 
 </body>
 
+</html>
+</main>
+
+<footer class="d-flex justify-content-center align-items-center bg-dark text-light">
+  <p> ABM | <img src="public/img/logo.png" height="40" width="80"></p>
+</footer>
+
+
+
+</body>
+
 
 
 </html>
-    
