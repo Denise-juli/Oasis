@@ -33,6 +33,7 @@ class ServicioController{
               
              // require_once('views/header.html'); 
               require_once('views/detalle.php');
+              
          
              
         }
@@ -46,7 +47,8 @@ class ServicioController{
             $calificacion = $_POST['calif'];
       
             $model->addComentario($contenido, $calificacion, $servicio_id);
-            header("Location:../servicio/ver?id=$servicio_id");
+            header("Location:../detalle?id=$servicio_id");
+           
             
         }
 

@@ -75,7 +75,7 @@ echo "
   </div>
   <div class='card-body'>
     <blockquote class='blockquote mb-0'>
-        <form action='./addComentario?fkid=$servicio_id' method='POST'>
+        <form action='servicio/addComentario?fkid=$servicio_id' method='POST'>
             <div class='col-lg-8'>
             <label for='' class='form-label'>
             <textarea name='comentario' class='form-control' id='exampleFormControlTextarea1' rows='3'></textarea>                
