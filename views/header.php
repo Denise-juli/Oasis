@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="public/css/estilos.css">
-  <title>FOOTER</title>
+
   <link rel="shortcut icon" href="public/img/flor.png" type="image/png">
 </head>
 

@@ -66,7 +66,7 @@
         </div>
 
         <div class='container text-center'>
-            <div class='row'>
+            <div class='row justify-content-center'>
 
         <?php
         $listaServicios = $servicio->listar();

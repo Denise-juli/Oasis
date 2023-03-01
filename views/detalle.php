@@ -2,28 +2,29 @@
 <html lang="es">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-10">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha3104-1BmE4kWBq710iYhFldvKuhfTAU10auU10tT94WrHftjDbrCEXSU1oBoqyl2QvZ10jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="../public/css/estilos.css">
+  <!-- Required meta tags -->
+  <meta charset="utf-10">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha3104-1BmE4kWBq710iYhFldvKuhfTAU10auU10tT94WrHftjDbrCEXSU1oBoqyl2QvZ10jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="../public/css/estilos.css">
 
-    <title>detalle</title>
-    <link rel="shortcut icon" href="../public/img/flor.png" type="image/png">
+  <title>detalle</title>
+  <link rel="shortcut icon" href="../public/img/flor.png" type="image/png">
 </head>
 
 <body>
-  
 
 
-      <?php
- foreach ($listaServicios as $servicio) {
+
+  <?php
+  foreach ($listaServicios as $servicio) {
     $servicio_id = $servicio['servicio_id'];
     $nombre = $servicio['nombre'];
     $descripcion = $servicio['descripcion'];
     $precio = $servicio['precio'];
     $foto = $servicio['foto'];
- 
+
     echo "
 
 
@@ -62,11 +63,12 @@
 
 
 
-    </div>  
+    </div>  ";
 
+    //session_start();
+    if (isset($_SESSION['fk'])){
 
-
-
+echo "
 <div class='card w-25 m-auto'>
   <div class='card-header'>
     Deja tu comentario aqui: 
@@ -89,48 +91,53 @@
 
   </div>
 </div> ";
+  }
 }
 
-?>
+  ?>
 
 
 
-                             
 
 
-    <?php
-//======================COMENTARIOS AYER 28/02==========================
-foreach ($comentarios as $comentario) {
-                
+
+  <?php
+  //======================COMENTARIOS AYER 28/02==========================
+ 
+    
+
+  foreach ($comentarios as $comentario) {
+
     $contenido = $comentario['contenido'];
     $calificacion = $comentario['calificacion'];
     echo "<div class='card w-50 m-auto mt-5 mb-5'>
-    <div class='card-header'>
-      <img src='public/img/comillas.png' alt='imagen de comillas' style='max-width: 40px';>
-    </div>
-    <div class='card-body'>
-      <blockquote class='blockquote mb-0'>
-        <p>" . $contenido . 
-          "
-        </p>
-        <footer class='blockquote-footer'>Calificación: " . $calificacion . "</footer>
-      </blockquote>
-    </div>
-  </div>";
-}
-//======================================================================
-?>
+            <div class='card-header'>
+              <img src='public/img/comillas.png' alt='imagen de comillas' style='max-width: 40px';>
+            </div>
+            <div class='card-body'>
+              <blockquote class='blockquote mb-0'>
+                <p>" . $contenido .
+              "
+                </p>
+                <footer class='blockquote-footer'>Calificación: " . $calificacion . "</footer>
+              </blockquote>
+            </div>
+          </div>";
+  }
 
-<style>
-      input {
-        background-color: #966857;
-        border-color: #966857;
-        color: white;
-        font-family: 'Raleway', sans-serif;
-      }
-    </style>
+  //======================================================================
+  ?>
 
-<style>
+  <style>
+    input {
+      background-color: #966857;
+      border-color: #966857;
+      color: white;
+      font-family: 'Raleway', sans-serif;
+    }
+  </style>
+
+  <style>
     body {
       font-family: 'Raleway', sans-serif;
     }
@@ -138,83 +145,84 @@ foreach ($comentarios as $comentario) {
 
 
 
-    <div class="panel-footer">
-        <div class="container">
-        </div>
+  <div class="panel-footer">
+    <div class="container">
     </div>
+  </div>
 </body>
 
-<div class="container-fluid fondofooter text-center">
+<div class="container-fluid fondofooter text-center mt-5">
 
 
-<div class="row align-items-center">
+  <div class="row align-items-center">
 
     <div class="col-sm-4">
-        <ul>
-            <li>
-                <a href="index">Home</a>
-            </li>
-            <li>
-                <a href="servicios">Servicios</a>
-            </li>
-            <li>
-                <a href="nosotros">Nosotros</a>
-            </li>
-            <li>
-                <a href="contacto">Contacto</a>
-            </li>
-            <li>
-                <a href="sedes">Sedes</a>
-            </li>
-            <li>
-                <a href="login">Login</a>
-            </li>
-        </ul>
+      <ul>
+        <li>
+          <a href="index">Home</a>
+        </li>
+        <li>
+          <a href="servicios">Servicios</a>
+        </li>
+        <li>
+          <a href="nosotros">Nosotros</a>
+        </li>
+        <li>
+          <a href="contacto">Contacto</a>
+        </li>
+        <li>
+          <a href="sedes">Sedes</a>
+        </li>
+        <li>
+          <a href="login">Login</a>
+        </li>
+      </ul>
     </div>
 
     <div class="col-sm-4 text-center">
-        <p>Horarios</p>
-        <p>​Lunes a Viernes 12 a 21hs <br>
-            Sábados 10 a 21hs <br>
-            Domingos y feriados 16 a 21hs <br>
-            <br>
-            ​Horario Administrativo: De Lunes a Sábado de 10 a 21hs
-        </p>
+      <p>Horarios</p>
+      <p>​Lunes a Viernes 12 a 21hs <br>
+        Sábados 10 a 21hs <br>
+        Domingos y feriados 16 a 21hs <br>
+        <br>
+        ​Horario Administrativo: De Lunes a Sábado de 10 a 21hs
+      </p>
     </div>
 
     <div class="col-sm-4 text-center">
-        <p>Contacto</p>
-        <p>011-458962351 / 2 <br>
-            011-456897856 / 5 <br>
-            consultas@spa.com <br>
-            <br>
-            Sede Barrio Norte:​Vicente López 2050
-        </p>
+      <p>Contacto</p>
+      <p>011-458962351 / 2 <br>
+        011-456897856 / 5 <br>
+        consultas@spa.com <br>
+        <br>
+        Sede Barrio Norte:​Vicente López 2050
+      </p>
     </div>
 
-</div>
+  </div>
 
-<div class="linea">
+  <div class="linea">
 
-</div>
+  </div>
 
 
-<div class="row">
+  <div class="row">
     <div class="col align-self-start">
-        <img src="../public/img/logo.png" alt="logo del spa" width="80" height="auto">
+      <img src="../public/img/logo.png" alt="logo del spa" width="80" height="auto">
     </div>
 
     <div class="col  align-self-end">
-        <img class="iconos" src="../public/img/instagram.png" alt="logo instagram">
+      <img class="iconos" src="../public/img/instagram.png" alt="logo instagram">
 
 
-        <img class="iconos" src="../public/img/facebook.png" alt="logo instagram">
+      <img class="iconos" src="../public/img/facebook.png" alt="logo instagram">
 
 
-        <img class="iconos" src="../public/img/twitter.png" alt="logo instagram">
+      <img class="iconos" src="../public/img/twitter.png" alt="logo instagram">
     </div>
-</div>
+  </div>
 
 
 </div>
+
 </html>
